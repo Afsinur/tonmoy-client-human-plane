@@ -47,10 +47,20 @@ function GetToKnowUs() {
               </div>
 
               <div className="grid grid-cols-2 gap-6 items-center">
-                <button className="py-4 rounded-full border uppercase font-semibold bg-[#123821] text-white">
+                <button className="py-4 rounded-full border uppercase font-semibold bg-[#123821] text-white hover:bg-[#a79132] hover:text-white transition-colors">
                   discover more
                 </button>
-                <FaSquarePhone className="text-[#a79132] text-4xl cursor-pointer" />
+                <div className="flex items-center gap-4">
+                  <FaSquarePhone className="text-[#a79132] text-5xl cursor-pointer" />
+                  <div className="grid">
+                    <p className="uppercase text-slate-500 text-sm">
+                      call anytime
+                    </p>
+                    <p className="uppercase text-xl text-[#123821] font-semibold">
+                      +92 {`(`} 8800 {`)`} - 6780
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
