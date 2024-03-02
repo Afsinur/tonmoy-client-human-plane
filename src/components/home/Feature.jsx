@@ -1,5 +1,6 @@
 import React from "react";
 import { MdOutlineFeaturedPlayList } from "react-icons/md";
+import { Fade } from "react-awesome-reveal";
 
 function Feature() {
   const features = [
@@ -10,15 +11,20 @@ function Feature() {
   ];
 
   return (
-    <div className="pt-80 pb-20 bg-[linear-gradient(rgba(167,145,50,0.72),rgba(167,145,50,0.72))]">
+    <div className="pt-60 pb-20 bg-[linear-gradient(rgba(167,145,50,0.72),rgba(167,145,50,0.72))]">
       <div className="container mx-auto grid gap-12">
-        <h2 className="capitalize text-3xl font-semibold text-center text-white drop-shadow-lg">
-          features
-        </h2>
+        <Fade>
+          <h2 className="capitalize text-3xl font-semibold text-center text-white drop-shadow-lg">
+            features
+          </h2>
+        </Fade>
+
         <div className="grid gap-4 grid-cols-4">
           {features.map((obj, i) => (
             <div key={i}>
-              <FeatureCard obj={obj} />
+              <Fade>
+                <FeatureCard obj={obj} />
+              </Fade>
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 function NavbarWithHero() {
   return (
@@ -56,11 +57,22 @@ function NavbarWithHero() {
             </div>
           </div>
 
-          <img
-            src="./float-hero-img.png"
-            alt="image"
-            className="z-10 absolute -bottom-full left-1/4 w-3/4 animate-bounce"
-          />
+          <motion.div
+            initial={{ translateY: 0 }}
+            animate={{ translateY: [100, 0, 100] }}
+            transition={{
+              duration: 4, // Duration of each segment of the animation
+              repeat: Infinity, // Repeat infinitely
+              ease: "easeIn", // Easing function (smooth in-out)
+              delay: 0.5, // Delay before animation starts
+            }}
+          >
+            <img
+              src="./float-hero-img.png"
+              alt="image"
+              className="z-10 absolute bottom-0 left-1/2 w-full scale-[2] -translate-x-1/2 translate-y-full"
+            />
+          </motion.div>
         </div>
       </div>
     </div>

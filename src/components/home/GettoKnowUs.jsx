@@ -1,12 +1,13 @@
 import React from "react";
 import { MdDone } from "react-icons/md";
 import { FaSquarePhone } from "react-icons/fa6";
+import GetToKnowUsCards from "./GetToKnowUsCards";
 
 function GetToKnowUs() {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-8 py-32">
+        <div className="grid grid-cols-2 gap-8 pt-32 pb-20">
           <div>
             <div className="grid gap-6">
               <div>
@@ -65,16 +66,18 @@ function GetToKnowUs() {
             </div>
           </div>
 
-          <div className="p-12">
-            <div className="bg-[#f8f7f1]">
+          <div className="p-12 flex justify-end">
+            <div className="bg-[#f8f7f1] h-[600px] w-fit">
               <img
                 src="./get-to-know-us-right-img.jpg"
                 alt="image"
-                className="w-full translate-x-[50px] -translate-y-[50px]"
+                className="h-full translate-x-[50px] -translate-y-[50px]"
               />
             </div>
           </div>
         </div>
+
+        <GetToKnowUsCards />
       </div>
     </div>
   );
