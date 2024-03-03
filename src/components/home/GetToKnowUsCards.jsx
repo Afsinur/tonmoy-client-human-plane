@@ -2,8 +2,8 @@ import React from "react";
 
 function GetToKnowUsCards() {
   const SubCards = [
-    { src: "./sub-card-1.jpg", title: "Exclusive <br/> new offers" },
-    { src: "./sub-card-2.jpg", title: "Join our <br/> cabin crew" },
+    { src: "./sub-card-1.jpg", title: "Exclusive new offers" },
+    { src: "./sub-card-2.jpg", title: "Join our cabin crew" },
   ];
 
   return (
@@ -50,9 +50,20 @@ function SpecialCard() {
 
 function SubCard({ obj }) {
   return (
-    <div className="relative">
-      <img src={obj.src} alt="image" />
-      <h2 dangerouslySetInnerHTML={{ __html: obj.title }} />
+    <div className="relative group overflow-hidden h-full p-14 flex items-end">
+      <img
+        src={obj.src}
+        alt="image"
+        className="absolute top-0 left-0 object-cover z-10 group-hover:scale-105 transition-transform"
+      />
+      <h2 className="text-white drop-shadow-md relative z-50 capitalize text-2xl font-semibold">
+        {obj.title}
+      </h2>
+
+      <div className="bg-gradient-to-t from-[#12382111] to-[#12382111] h-full w-full absolute bottom-0 left-0 z-20"></div>
+      <div className="bg-gradient-to-t from-[#1238214d] h-1/3 w-full absolute bottom-0 left-0 z-30"></div>
+      <div className="bg-gradient-to-t from-[#1238214d] h-1/3 w-full absolute bottom-0 left-0 z-30"></div>
+      <div className="bg-gradient-to-t from-[#1238216a] to-[#1238216a] h-full w-full absolute bottom-0 left-0 z-40 transition-transform -translate-y-full group-hover:translate-y-0 duration-300"></div>
     </div>
   );
 }
