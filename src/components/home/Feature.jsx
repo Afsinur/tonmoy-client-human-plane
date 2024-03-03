@@ -11,7 +11,7 @@ function Feature() {
   ];
 
   return (
-    <div className="pt-60 pb-20 bg-[linear-gradient(rgba(167,145,50,0.72),rgba(167,145,50,0.72))]">
+    <div className="py-20 bg-[linear-gradient(rgba(167,145,50,0.72),rgba(167,145,50,0.72))]">
       <div className="container mx-auto grid gap-12">
         <Fade>
           <h2 className="capitalize text-3xl font-semibold text-center text-white drop-shadow-lg">

@@ -1,11 +1,11 @@
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
-import { motion } from "framer-motion";
+import { FaPlay } from "react-icons/fa";
 
 function NavbarWithHero() {
   return (
-    <div className="bg-[linear-gradient(rgba(18,56,33,0.72),rgba(18,56,33,0.72)),url(./hero-bg.jpg)] bg-no-repeat bg-center bg-cover">
+    <div className="h-[115vh] relative bg-gradient-to-b from-black  overflow-hidden">
       <div className="border-b py-5">
         <div className="container mx-auto flex items-center justify-between">
           <a href="#">
@@ -37,45 +37,51 @@ function NavbarWithHero() {
         </div>
       </div>
 
-      <div className="container mx-auto pb-40">
-        <div className="h-[80vh] text-center grid place-content-center relative">
-          <div className="grid gap-10 z-20 relative">
-            <p className="capitalize font-semibold text-white">
-              Save time and fly with comfort
-            </p>
-            <h2 className="text-7xl font-bold text-white">
-              Luxury Jet <br /> Flights
-            </h2>
+      <Hero />
+    </div>
+  );
+}
 
-            <div className="flex items-center gap-4">
-              <button className="uppercase px-16 py-4 rounded-full font-semibold bg-[#a79132] text-white hover:bg-white hover:text-[#a79132] transition-colors">
-                book now
-              </button>
-              <button className="uppercase px-16 py-4 rounded-full font-semibold text-[#123821] bg-white hover:bg-[#a79132] hover:text-white">
-                read more
-              </button>
-            </div>
-          </div>
+function Hero() {
+  return (
+    <>
+      <video
+        autoPlay
+        muted
+        loop
+        className="absolute top-0 left-0 min-w-full min-h-full z-[-1] object-cover"
+      >
+        <source src="./jetcraft-3d-animation.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-          <motion.div
-            initial={{ translateY: 0 }}
-            animate={{ translateY: [100, 0, 100] }}
-            transition={{
-              duration: 4, // Duration of each segment of the animation
-              repeat: Infinity, // Repeat infinitely
-              ease: "easeIn", // Easing function (smooth in-out)
-              delay: 0.5, // Delay before animation starts
-            }}
-          >
-            <img
-              src="./float-hero-img.png"
-              alt="image"
-              className="z-10 absolute bottom-0 left-1/2 w-full scale-[2] -translate-x-1/2 translate-y-full"
-            />
-          </motion.div>
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="text-center text-white">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 uppercase">
+            bird of life
+          </h1>
         </div>
       </div>
-    </div>
+
+      <div className="bg-gradient-to-t from-[#c0b06c] h-1/3 w-full absolute bottom-0 left-0"></div>
+
+      <div className="absolute bottom-0 left-0 border rounded-full p-5 translate-x-2/3 -translate-y-2/3 z-10 border-slate-50/20">
+        <div className="border rounded-full p-5 border-slate-50/50">
+          <div className="border rounded-full p-5 border-slate-50/80">
+            <div className="p-5 bg-white rounded-full cursor-pointer">
+              <FaPlay className="text-blue-500" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 translate-x-[330%] z-10 flex gap-2 items-center">
+        <div className="cursor-pointer w-6 h-6 bg-blue-300 shadow-md rounded-full grid place-content-center">
+          <div className="w-3 h-3 bg-white shadow-md rounded-full grid place-content-center"></div>
+        </div>
+        <div className="cursor-pointer w-6 h-6 bg-slate-300 shadow-md rounded-full"></div>
+      </div>
+    </>
   );
 }
 
