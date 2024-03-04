@@ -42,7 +42,7 @@ function NavbarWithHero() {
           <span className="text-2xl">
             Türkiye{`´`}nin İlk Uçan İnsan Projesi A.Ş
           </span>{" "}
-          <br /> <span className="text-6xl font-bold italic">Cankuşu</span>
+          <br /> <span className="text-7xl font-bold italic">Cankuşu</span>
         </h2>
       </div>
 
