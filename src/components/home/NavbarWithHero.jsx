@@ -38,11 +38,11 @@ function NavbarWithHero() {
       </div>
 
       <div className="container mx-auto py-20">
-        <h2 className="text-white font-semibold">
-          <span className="text-2xl">
+        <h2 className="text-white font-semibold p-10">
+          <span className="text-4xl">
             Türkiye{`´`}nin İlk Uçan İnsan Projesi A.Ş
           </span>{" "}
-          <br /> <span className="text-7xl font-bold italic">Cankuşu</span>
+          <br /> <span className="text-9xl font-bold italic">Cankuşu</span>
         </h2>
       </div>
 
