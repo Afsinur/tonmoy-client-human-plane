@@ -37,6 +37,15 @@ function NavbarWithHero() {
         </div>
       </div>
 
+      <div className="container mx-auto py-20">
+        <h2 className="text-white font-semibold">
+          <span className="text-2xl">
+            Türkiye{`´`}nin İlk Uçan İnsan Projesi A.Ş
+          </span>{" "}
+          <br /> <span className="text-6xl font-bold italic">Cankuşu</span>
+        </h2>
+      </div>
+
       <Hero />
     </div>
   );
@@ -54,14 +63,6 @@ function Hero() {
         <source src="./jetcraft-3d-animation.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-
-      <div className="absolute inset-0 flex items-center justify-center z-10">
-        <div className="text-center text-white">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 uppercase">
-            bird of life
-          </h1>
-        </div>
-      </div>
 
       <div className="bg-gradient-to-t from-[#142143] h-1/3 w-full absolute bottom-0 left-0"></div>
 
