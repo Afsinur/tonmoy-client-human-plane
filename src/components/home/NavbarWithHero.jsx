@@ -63,7 +63,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-t from-[#c0b06c] h-1/3 w-full absolute bottom-0 left-0"></div>
+      <div className="bg-gradient-to-t from-[#142143] h-1/3 w-full absolute bottom-0 left-0"></div>
 
       <div className="absolute bottom-0 left-0 border rounded-full p-5 translate-x-2/3 -translate-y-2/3 z-10 border-slate-50/20">
         <div className="border rounded-full p-5 border-slate-50/50">

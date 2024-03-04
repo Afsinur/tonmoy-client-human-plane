@@ -1,16 +1,14 @@
 import React from "react";
 import NavbarWithHero from "./NavbarWithHero";
-import Feature from "./Feature";
-import GetToKnowUs from "./GettoKnowUs";
 import Footer from "./Footer";
+import News from "./News";
 
 function Home() {
   return (
     <>
       <div>
         <NavbarWithHero />
-        <Feature />
-        <GetToKnowUs />
+        <News />
         <Footer />
       </div>
     </>

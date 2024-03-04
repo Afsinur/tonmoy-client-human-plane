@@ -8,7 +8,7 @@ import {
 
 function Footer() {
   return (
-    <div className="bg-[#123821] text-white py-20">
+    <div className="bg-[#142143] text-white py-20">
       <div className="container mx-auto grid gap-8">
         <div className="flex gap-8 justify-between">
           <div>
