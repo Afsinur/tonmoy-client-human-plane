@@ -2,6 +2,7 @@ import React from "react";
 import NavbarWithHero from "./NavbarWithHero";
 import Footer from "./Footer";
 import News from "./News";
+import PushingTheLimits from "./PushingTheLimits";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <div>
         <NavbarWithHero />
         <News />
+        <PushingTheLimits />
         <Footer />
       </div>
     </>

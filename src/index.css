@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sceleton {
+}
+
+.meat {
+  clip: rect(0px, 1349px, 550px, 477px);
+}
