@@ -1,12 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { FaPlay } from "react-icons/fa";
 
 function NavbarWithHero() {
+  const [active, setActive] = useState(false);
+
   const heroH2 = useRef();
   return (
-    <div className="h-[98vh] relative bg-gradient-to-b from-black  overflow-hidden">
+    <div
+      className={`h-[98vh] relative bg-gradient-to-b from-black via-transparent to-transparent overflow-hidden`}
+    >
       <div className="border-b py-5">
         <div className="container mx-auto flex items-center justify-between">
           <a href="#">
@@ -50,14 +54,29 @@ function NavbarWithHero() {
         </h2>
       </div>
 
-      <Hero heroH2={heroH2} />
+      <Hero heroH2={heroH2} active={active} setActive={setActive} />
     </div>
   );
 }
 
-function Hero({ heroH2 }) {
-  const [active, setActive] = useState(false);
+function Hero({ heroH2, active, setActive }) {
   const video = useRef();
+  const slider2 = useRef();
+
+  function handleSlideLeft() {
+    video.current.classList.remove("-translate-x-full");
+    heroH2.current.classList.remove("-translate-x-[120%]");
+
+    slider2.current.classList.add("translate-x-full");
+    setActive(false);
+  }
+  function handleSlideRight() {
+    video.current.classList.add("-translate-x-full");
+    heroH2.current.classList.add("-translate-x-[120%]");
+
+    slider2.current.classList.remove("translate-x-full");
+    setActive(true);
+  }
 
   return (
     <>
@@ -72,7 +91,16 @@ function Hero({ heroH2 }) {
         Your browser does not support the video tag.
       </video>
 
-      <div className="bg-gradient-to-t from-[#142143] h-1/3 w-full absolute bottom-0 left-0"></div>
+      <div
+        ref={slider2}
+        className="grid place-content-center duration-300 transition-transform absolute top-0 left-0 w-full h-full translate-x-full"
+      >
+        <img src="./slider-2.png" alt="image" className="w-full object-cover" />
+      </div>
+
+      {!active && (
+        <div className="bg-gradient-to-t from-[#142143] h-1/3 w-full absolute bottom-0 left-0"></div>
+      )}
 
       <div className="absolute bottom-0 left-0 border rounded-full p-5 translate-x-2/3 -translate-y-2/3 z-10 border-slate-50/20">
         <div className="border rounded-full p-5 border-slate-50/50">
@@ -84,13 +112,9 @@ function Hero({ heroH2 }) {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 translate-x-[330%] z-10 flex gap-2 items-center">
+      <div className="absolute bottom-[1rem] left-0 translate-x-[330%] z-10 flex gap-2 items-center">
         <div
-          onClick={() => {
-            video.current.classList.remove("-translate-x-full");
-            heroH2.current.classList.remove("-translate-x-[120%]");
-            setActive(false);
-          }}
+          onClick={() => handleSlideLeft()}
           className={`cursor-pointer w-6 h-6 ${
             !active ? `bg-blue-300` : `bg-slate-300`
           } shadow-md rounded-full grid place-content-center`}
@@ -99,15 +123,12 @@ function Hero({ heroH2 }) {
             <div className="w-3 h-3 bg-white shadow-md rounded-full grid place-content-center"></div>
           )}
         </div>
+
         <div
           className={`cursor-pointer w-6 h-6 ${
             active ? `bg-blue-300` : `bg-slate-300`
           } shadow-md rounded-full grid place-content-center`}
-          onClick={() => {
-            video.current.classList.add("-translate-x-full");
-            heroH2.current.classList.add("-translate-x-[120%]");
-            setActive(true);
-          }}
+          onClick={() => handleSlideRight()}
         >
           {active && (
             <div className="w-3 h-3 bg-white shadow-md rounded-full grid place-content-center"></div>
