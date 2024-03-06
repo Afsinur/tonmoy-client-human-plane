@@ -9,12 +9,12 @@ function NavbarWithHero() {
   const heroH2 = useRef();
   return (
     <div
-      className={`h-[98vh] relative bg-gradient-to-b from-black via-transparent to-transparent overflow-hidden`}
+      className={`h-[98vh] relative bg-gradient-to-b from-black via-transparent to-transparent overflow-hidden bg-[url(./slider-2-1.png)] bg-cover bg-center`}
     >
       <div className="border-b py-5 relative z-[2] bg-gradient-to-b from-black to-transparent">
         <div className="container mx-auto flex items-center justify-between">
           <a href="#">
-            <img src="./logo-white.png" alt="image" className="w-52" />
+            <img src="/logo-white.png" alt="image" className="w-52" />
           </a>
 
           <ul className="flex items-center gap-16 text-white text-lg font-semibold">
@@ -45,7 +45,7 @@ function NavbarWithHero() {
       <div className="container mx-auto flex items-center h-4/6">
         <h2
           ref={heroH2}
-          className="duration-300 transition-transform text-white font-semibold leading-none"
+          className="duration-300 transition-transform text-white font-semibold leading-none z-[3] relative drop-shadow-xl"
         >
           <span className="text-5xl">
             Türkiye{`´`}nin İlk Uçan İnsan Projesi A.Ş
@@ -65,14 +65,14 @@ function Hero({ heroH2, active, setActive }) {
 
   function handleSlideLeft() {
     video.current.classList.remove("-translate-x-full");
-    heroH2.current.classList.remove("-translate-x-[120%]");
+    heroH2.current.classList.remove("-translate-x-[400%]");
 
     slider2.current.classList.add("translate-x-full");
     setActive(false);
   }
   function handleSlideRight() {
     video.current.classList.add("-translate-x-full");
-    heroH2.current.classList.add("-translate-x-[120%]");
+    heroH2.current.classList.add("-translate-x-[400%]");
 
     slider2.current.classList.remove("translate-x-full");
     setActive(true);
@@ -85,7 +85,7 @@ function Hero({ heroH2, active, setActive }) {
         autoPlay
         muted
         loop
-        className="duration-300 transition-transform absolute top-0 left-0 min-w-full min-h-full z-[-1] object-cover"
+        className="duration-300 transition-transform absolute top-0 left-0 min-w-full min-h-full z-[1] object-cover"
       >
         <source src="./jetcraft-3d-animation.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -98,20 +98,17 @@ function Hero({ heroH2, active, setActive }) {
         <img
           src="./slider-2.png"
           alt="image"
-          className="w-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]"
-        />
-        <img
-          src="./slider-2-1.png"
-          alt="image"
-          className="z-[1] w-full object-contain absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]"
         />
 
-        <h2 className="relative z-[2] top-1/3 left-[5rem] -translate-y-1/2 text-9xl font-semibold drop-shadow-xl text-white">
-          TUIPAS <br /> Cankuşu
-        </h2>
+        <div className="container mx-auto h-full">
+          <h2 className="relative z-[2] top-1/3 -translate-y-1/2 text-8xl font-semibold drop-shadow-xl text-white">
+            <span className="text-6xl">TUIPAS</span> <br /> Cankuşu
+          </h2>
+        </div>
       </div>
 
-      <div className="bg-gradient-to-t from-[#142143] h-1/3 w-full absolute bottom-0 left-0"></div>
+      <div className="bg-gradient-to-t from-[#142143] h-1/3 w-full absolute bottom-0 left-0 z-[3]"></div>
 
       <div className="absolute bottom-0 left-0 border rounded-full p-5 translate-x-2/3 -translate-y-2/3 z-10 border-slate-50/20">
         <div className="border rounded-full p-5 border-slate-50/50">

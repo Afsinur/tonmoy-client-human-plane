@@ -49,9 +49,11 @@ function PushingTheLimits() {
       offsetX2 = lastPos;
     });
 
-    meat.current.style.clip = `rect(0px, ${window.innerWidth}px, 550px, ${
-      meat.current.clientWidth / 2
-    }px)`;
+    setTimeout(() => {
+      meat.current.style.clip = `rect(0px, ${window.innerWidth}px, 550px, ${
+        meat.current.clientWidth / 2
+      }px)`;
+    }, 10);
   }, []);
 
   return (
