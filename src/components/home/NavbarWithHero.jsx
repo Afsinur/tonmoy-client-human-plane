@@ -9,7 +9,7 @@ function NavbarWithHero() {
   const heroH2 = useRef();
   return (
     <div
-      className={`h-[98vh] relative bg-gradient-to-b from-black via-transparent to-transparent overflow-hidden bg-[url(./slider-2-1.png)] bg-cover bg-center`}
+      className={`h-[98vh] relative bg-gradient-to-b from-black via-transparent to-transparent overflow-hidden bg-[url(/slider-2-1.png)] bg-cover bg-center`}
     >
       <div className="border-b py-5 relative z-[2] bg-gradient-to-b from-black to-transparent">
         <div className="container mx-auto flex items-center justify-between">
@@ -87,7 +87,7 @@ function Hero({ heroH2, active, setActive }) {
         loop
         className="duration-300 transition-transform absolute top-0 left-0 min-w-full min-h-full z-[1] object-cover"
       >
-        <source src="./jetcraft-3d-animation.mp4" type="video/mp4" />
+        <source src="/jetcraft-3d-animation.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -96,7 +96,7 @@ function Hero({ heroH2, active, setActive }) {
         className="duration-300 transition-transform absolute top-0 left-0 w-full h-full translate-x-full"
       >
         <img
-          src="./slider-2.png"
+          src="/slider-2.png"
           alt="image"
           className="h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]"
         />
