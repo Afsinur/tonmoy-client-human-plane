@@ -3,26 +3,18 @@ import React from "react";
 function News() {
   return (
     <div className="bg-[#142143]">
-      <div className="container mx-auto py-20 text-white">
+      <div className="container mx-auto py-40 text-white">
         <div className="grid gap-8">
           <div>
             <h2 className="uppercase text-4xl font-bold">News</h2>
           </div>
 
-          <div className="grid grid-cols-3 gap-8">
-            <div className="col-span-2">
-              <div className="grid grid-cols-2 gap-8">
-                {[1, 2, 3, 4].map((itm, i) => (
-                  <div key={i}>
-                    <GridCards />
-                  </div>
-                ))}
+          <div className="grid grid-cols-2 gap-12 px-20">
+            {[1, 2, 3, 4].map((itm, i) => (
+              <div key={i}>
+                <GridCards />
               </div>
-            </div>
-
-            <div>
-              <Tweets />
-            </div>
+            ))}
           </div>
         </div>
       </div>

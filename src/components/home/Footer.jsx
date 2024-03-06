@@ -23,7 +23,7 @@ function Footer() {
           <div className="grid gap-6">
             <h2 className="text-lg text-slate-100 font-semibold">Explore</h2>
 
-            <ul class="text-slate-400 grid gap-2">
+            <ul className="text-slate-400 grid gap-2">
               <li>
                 <a href="#">About</a>
               </li>
@@ -45,7 +45,7 @@ function Footer() {
           <div className="grid gap-6">
             <h2 className="text-lg text-slate-100 font-semibold">Links</h2>
 
-            <ul class="text-slate-400 grid gap-2">
+            <ul className="text-slate-400 grid gap-2">
               <li>
                 <a href="#">About</a>
               </li>
@@ -67,7 +67,7 @@ function Footer() {
           <div className="grid gap-6">
             <h2 className="text-lg text-slate-100 font-semibold">Contact</h2>
 
-            <ul class="text-slate-400 grid gap-2">
+            <ul className="text-slate-400 grid gap-2">
               <li>
                 <a href="#">About</a>
               </li>
@@ -95,7 +95,7 @@ function Footer() {
           </p>
 
           <div>
-            <ul class="flex items-center gap-8">
+            <ul className="flex items-center gap-8">
               <li>
                 <a href="#">
                   <FaFacebookF />

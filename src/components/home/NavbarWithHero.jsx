@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { FaPlay } from "react-icons/fa";
 
 function NavbarWithHero() {
+  const heroH2 = useRef();
   return (
-    <div className="h-[115vh] relative bg-gradient-to-b from-black  overflow-hidden">
+    <div className="h-[98vh] relative bg-gradient-to-b from-black  overflow-hidden">
       <div className="border-b py-5">
         <div className="container mx-auto flex items-center justify-between">
           <a href="#">
@@ -38,7 +39,10 @@ function NavbarWithHero() {
       </div>
 
       <div className="container mx-auto flex items-center h-4/6">
-        <h2 className="text-white font-semibold leading-none">
+        <h2
+          ref={heroH2}
+          className="duration-300 transition-transform text-white font-semibold leading-none"
+        >
           <span className="text-5xl">
             Türkiye{`´`}nin İlk Uçan İnsan Projesi A.Ş
           </span>{" "}
@@ -46,19 +50,23 @@ function NavbarWithHero() {
         </h2>
       </div>
 
-      <Hero />
+      <Hero heroH2={heroH2} />
     </div>
   );
 }
 
-function Hero() {
+function Hero({ heroH2 }) {
+  const [active, setActive] = useState(false);
+  const video = useRef();
+
   return (
     <>
       <video
+        ref={video}
         autoPlay
         muted
         loop
-        className="absolute top-0 left-0 min-w-full min-h-full z-[-1] object-cover"
+        className="duration-300 transition-transform absolute top-0 left-0 min-w-full min-h-full z-[-1] object-cover"
       >
         <source src="./jetcraft-3d-animation.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -77,10 +85,34 @@ function Hero() {
       </div>
 
       <div className="absolute bottom-0 left-0 translate-x-[330%] z-10 flex gap-2 items-center">
-        <div className="cursor-pointer w-6 h-6 bg-blue-300 shadow-md rounded-full grid place-content-center">
-          <div className="w-3 h-3 bg-white shadow-md rounded-full grid place-content-center"></div>
+        <div
+          onClick={() => {
+            video.current.classList.remove("-translate-x-full");
+            heroH2.current.classList.remove("-translate-x-[120%]");
+            setActive(false);
+          }}
+          className={`cursor-pointer w-6 h-6 ${
+            !active ? `bg-blue-300` : `bg-slate-300`
+          } shadow-md rounded-full grid place-content-center`}
+        >
+          {!active && (
+            <div className="w-3 h-3 bg-white shadow-md rounded-full grid place-content-center"></div>
+          )}
         </div>
-        <div className="cursor-pointer w-6 h-6 bg-slate-300 shadow-md rounded-full"></div>
+        <div
+          className={`cursor-pointer w-6 h-6 ${
+            active ? `bg-blue-300` : `bg-slate-300`
+          } shadow-md rounded-full grid place-content-center`}
+          onClick={() => {
+            video.current.classList.add("-translate-x-full");
+            heroH2.current.classList.add("-translate-x-[120%]");
+            setActive(true);
+          }}
+        >
+          {active && (
+            <div className="w-3 h-3 bg-white shadow-md rounded-full grid place-content-center"></div>
+          )}
+        </div>
       </div>
     </>
   );
