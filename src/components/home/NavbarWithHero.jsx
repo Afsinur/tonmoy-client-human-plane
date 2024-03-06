@@ -9,7 +9,7 @@ function NavbarWithHero() {
   const heroH2 = useRef();
   return (
     <div
-      className={`h-[98vh] relative bg-gradient-to-b from-black via-transparent to-transparent overflow-hidden bg-[url(/slider-2-1.png)] bg-cover bg-center`}
+      className={`h-[98vh] relative bg-gradient-to-b from-black via-transparent to-transparent overflow-hidden bg-[url('/slider-2-1.png')] bg-cover bg-center`}
     >
       <div className="border-b py-5 relative z-[2] bg-gradient-to-b from-black to-transparent">
         <div className="container mx-auto flex items-center justify-between">
