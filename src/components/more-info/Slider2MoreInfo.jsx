@@ -3,6 +3,7 @@ import NavbarWithHero from "../home/NavbarWithHero";
 import Details from "./Details";
 import Footer from "../home/Footer";
 import DetailsCard from "./DetailsCard";
+import PushingTheLimits from "../home/PushingTheLimits";
 
 function Slider2MoreInfo() {
   return (
@@ -10,6 +11,7 @@ function Slider2MoreInfo() {
       <NavbarWithHero page={"more-info"} />
       <Details />
       <DetailsCard />
+      <PushingTheLimits />
       <Footer />
     </>
   );

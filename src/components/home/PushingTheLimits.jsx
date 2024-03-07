@@ -75,13 +75,13 @@ function PushingTheLimits() {
       <div className="container mx-auto py-20 relative overflow-hidden">
         <div className="relative h-[60vh] select-none">
           <img
-            src="./sceleton.png"
+            src="/sceleton.png"
             alt="image"
             className="sceleton absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
           />
           <img
             ref={meat}
-            src="./meat.png"
+            src="/meat.png"
             alt="image"
             className="meat absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
           />
