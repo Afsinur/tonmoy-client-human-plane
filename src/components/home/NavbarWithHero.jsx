@@ -93,14 +93,14 @@ function Hero({ heroH2, active, setActive, page }) {
 
       <div
         ref={slider2}
-        className={`duration-300 transition-transform absolute top-0 left-0 w-full h-full ${
+        className={`duration-300 transition-transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-[1200px] ${
           !(page == "more-info") ? `translate-x-full` : ``
         }`}
       >
         <img
           src="/slider-2.png"
           alt="image"
-          className="h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]"
+          className="w-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]"
         />
 
         <div
@@ -135,7 +135,7 @@ function Hero({ heroH2, active, setActive, page }) {
         {!(page == "more-info") && (
           <Link
             to="/info/slider-2"
-            className="flex items-center gap-4 capitalize absolute bottom-0 right-0 -translate-x-1/2 -translate-y-1/2 z-[4] bg-[#1e73bd] text-white px-8 py-4 rounded-xl shadow-lg text-xl mix-blend-difference"
+            className="flex items-center gap-4 capitalize absolute bottom-0 right-0 -translate-x-1/2 -translate-y-1/2 z-[7] bg-[#1e73bd] text-white px-8 py-4 rounded-xl shadow-lg text-xl mix-blend-difference"
           >
             more information <FaArrowRight />
           </Link>
@@ -148,7 +148,11 @@ function Hero({ heroH2, active, setActive, page }) {
         </div>
       </div>
 
-      <div className="bg-gradient-to-t from-[#142143] h-1/3 w-full absolute bottom-0 left-0 z-[3]"></div>
+      <div
+        className={`bg-gradient-to-t from-[#142143] h-1/3 w-full absolute bottom-0 left-0 ${
+          active ? `z-[-1]` : `z-[1]`
+        }`}
+      ></div>
 
       {!(page == "more-info") && (
         <div className="absolute bottom-0 left-0 border rounded-full p-5 translate-x-2/3 -translate-y-2/3 z-10 border-slate-50/20">
