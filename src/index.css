@@ -6,9 +6,17 @@ body {
   overflow-x: hidden;
 }
 
-.sceleton {
+.hero-text-shadow {
+  text-shadow: -1px 1px 8px #00000070;
 }
 
-.meat {
-  clip: rect(0px, 1349px, 550px, 477px);
+.general-info::before {
+  content: "General Information";
+  color: #2387df;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg) translatex(-50%);
+  font-size: 2rem;
+  font-weight: bold;
 }

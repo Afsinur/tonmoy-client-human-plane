@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <div>
-        <NavbarWithHero />
+        <NavbarWithHero page={"home"} />
         <News />
         <PushingTheLimits />
         <Footer />

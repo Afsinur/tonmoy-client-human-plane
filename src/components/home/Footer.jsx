@@ -13,7 +13,7 @@ function Footer() {
         <div className="flex gap-8 justify-between">
           <div>
             <div className="grid gap-4">
-              <img src="./logo-white.png" alt="image" className="w-60" />
+              <img src="/logo-white.png" alt="image" className="w-60" />
               <p className="text-lg capitalize font-semibold">
                 Private jet charters save your time and <br /> give you comfort.
               </p>
