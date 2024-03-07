@@ -103,6 +103,35 @@ function Hero({ heroH2, active, setActive, page }) {
           className="h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]"
         />
 
+        <div
+          data-title="3 Türbinden oluşmaktadır"
+          className="z-[4] rounded-full absolute top-[67%] left-[50%] bg-white p-2 grid place-content-center border border-8 border-sky-400 pulse-animate"
+        ></div>
+        <div
+          data-title="Ayak Standı"
+          className="z-[4] rounded-full absolute top-[37%] left-[54%] bg-white p-2 grid place-content-center border border-8 border-sky-400 pulse-animate"
+        ></div>
+        <div
+          data-title="1,2 Metre Kanat açıklığı (length of one wing)"
+          className="z-[4] rounded-full absolute top-[27%] left-[84%] bg-white p-2 grid place-content-center border border-8 border-sky-400 pulse-animate"
+        ></div>
+        <div
+          data-title="LED Fonksiyonlu"
+          className="z-[4] rounded-full absolute top-[66%] left-[42%] bg-white p-2 grid place-content-center border border-8 border-sky-400 pulse-animate"
+        ></div>
+        <div
+          data-title="Paraşüt içerir"
+          className="z-[4] rounded-full absolute top-[49%] left-[73%] bg-white p-2 grid place-content-center border border-8 border-sky-400 pulse-animate"
+        ></div>
+        <div
+          data-title="Parmak İzi Çalışma Sistemi"
+          className="z-[4] rounded-full absolute top-[39%] left-[80%] bg-white p-2 grid place-content-center border border-8 border-sky-400 pulse-animate"
+        ></div>
+        <div
+          data-title="Otomatik Stabilizasyon Teknolojisi"
+          className="z-[4] rounded-full absolute top-[22%] left-[64%] bg-white p-2 grid place-content-center border border-8 border-sky-400 pulse-animate"
+        ></div>
+
         {!(page == "more-info") && (
           <Link
             to="/info/slider-2"

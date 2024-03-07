@@ -20,3 +20,58 @@ body {
   font-size: 2rem;
   font-weight: bold;
 }
+
+.pulse-animate::before {
+  content: "";
+  color: #2387df;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  border-radius: 50%;
+  border: 6px solid white;
+  animation: pulse-animation 1000ms linear infinite;
+  pointer-events: none;
+}
+
+.pulse-animate::after {
+  display: none;
+  content: attr(data-title);
+  color: #2387df;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -116%);
+  padding: 10px 30px;
+  width: fit-content;
+  text-wrap: nowrap;
+  background: white;
+  border-radius: 6px;
+  font-size: 0.86rem;
+  border: 6px solid white;
+}
+
+.pulse-animate:hover {
+  cursor: pointer;
+}
+.pulse-animate:hover::after {
+  display: block;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+}
