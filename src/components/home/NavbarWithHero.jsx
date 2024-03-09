@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import NavBar from "../common/NavBar";
 
 function NavbarWithHero({ page }) {
   const [active, setActive] = useState(false);
@@ -11,31 +12,7 @@ function NavbarWithHero({ page }) {
     <div
       className={`h-[98vh] relative overflow-hidden bg-[url('/slider-2-1.png')] bg-cover bg-center`}
     >
-      <div className="py-3 relative z-[5] bg-gradient-to-b from-black to-transparent">
-        <div className="container mx-auto flex items-center justify-between">
-          <Link to="/">
-            <img src="/logo-white.png" alt="image" className="w-52" />
-          </Link>
-
-          <ul className="flex items-center gap-16 text-white text-lg font-semibold">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#">Testimonials</a>
-            </li>
-            <li>
-              <a href="#">News</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <NavBar />
 
       {!(page == "more-info") && (
         <div className="container mx-auto flex items-center h-4/6">
@@ -93,7 +70,7 @@ function Hero({ heroH2, active, setActive, page }) {
 
       <div
         ref={slider2}
-        className={`duration-300 transition-transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-[1200px] ${
+        className={`duration-300 transition-transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-[1200px] h-[700px] ${
           !(page == "more-info") ? `translate-x-full` : ``
         }`}
       >
@@ -135,7 +112,7 @@ function Hero({ heroH2, active, setActive, page }) {
         {!(page == "more-info") && (
           <Link
             to="/info/slider-2"
-            className="flex items-center gap-4 capitalize absolute bottom-0 right-0 -translate-x-1/2 -translate-y-1/2 z-[7] bg-[#1e73bd] text-white px-8 py-4 rounded-xl shadow-lg text-xl mix-blend-difference"
+            className="flex items-center gap-4 capitalize absolute bottom-0 right-0 -translate-x-1/2 -translate-y-full z-[7] bg-[#1e73bd] text-white px-8 py-4 rounded-xl shadow-lg text-xl mix-blend-difference"
           >
             more information <FaArrowRight />
           </Link>
