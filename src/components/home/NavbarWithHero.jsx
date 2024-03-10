@@ -70,7 +70,7 @@ function Hero({ heroH2, active, setActive, page }) {
 
       <div
         ref={slider2}
-        className={`duration-300 transition-transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-[1200px] h-[700px] ${
+        className={`duration-300 transition-transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[700px] ${
           !(page == "more-info") ? `translate-x-full` : ``
         }`}
       >
@@ -89,7 +89,7 @@ function Hero({ heroH2, active, setActive, page }) {
           className="z-[4] rounded-full absolute top-[37%] left-[54%] bg-white p-2 grid place-content-center border border-8 border-sky-400 pulse-animate"
         ></div>
         <div
-          data-title="1,2 Metre Kanat açıklığı (length of one wing)"
+          data-title="1,2 Metre Kanat açıklığı"
           className="z-[4] rounded-full absolute top-[27%] left-[84%] bg-white p-2 grid place-content-center border border-8 border-sky-400 pulse-animate"
         ></div>
         <div
