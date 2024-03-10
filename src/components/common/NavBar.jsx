@@ -47,6 +47,11 @@ function NavBar() {
       href: "#",
       subTitles: [{ title: "Basın Yayın", href: "#" }],
     },
+    {
+      title: "survey",
+      href: "/survey",
+      reactLink: true,
+    },
   ];
   return (
     <div>
@@ -58,10 +63,14 @@ function NavBar() {
 
           <ul className="flex items-center gap-8 text-white text-base font-semibold">
             {uls.map((itm, i) => (
-              <li className="relative group" key={i}>
-                <a href={itm.href} className="py-4">
-                  {itm.title}
-                </a>
+              <li className="relative group capitalize" key={i}>
+                {itm.reactLink ? (
+                  <Link to={itm.href}>{itm.title}</Link>
+                ) : (
+                  <a href={itm.href} className="py-4">
+                    {itm.title}
+                  </a>
+                )}
 
                 {itm.subTitles && (
                   <div className="transition-all duration-300 group-hover:opacity-100 block min-w-[300px] bg-white text-slate-600 absolute top-[35px] right-0 opacity-0 scale-y-0 group-hover:scale-y-100 origin-top">

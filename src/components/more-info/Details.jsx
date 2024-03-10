@@ -11,8 +11,7 @@ function Details() {
 
           <div className="flex pl-48 relative">
             <div className="grid gap-2 text-white text-xl general-info">
-              <p>- Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <p>- Lorem ipsum dolor sit amet consectetur.</p>
+              <p>TUİPAŞ - Türkiye´nin İlk Uçan İnsan Projesi A.Ş.</p>
             </div>
           </div>
         </div>
