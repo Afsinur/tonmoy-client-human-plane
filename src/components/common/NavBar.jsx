@@ -7,10 +7,21 @@ function NavBar() {
       title: "Kurumsal",
       href: "#",
       subTitles: [
-        { title: "Hakkımızda", href: "#" },
-        { title: "Kurucumuz kimdir?", href: "#" },
-        { title: "Vizyon, Misyon, Değerler ve Amaçlar", href: "#" },
-        { title: "Politikalar", href: "#" },
+        { title: "Hakkımızda", href: "/corporate" },
+        { title: "Kurucumuz kimdir?", href: "/corporate/our-founder" },
+        {
+          title: "Vizyon, Misyon, Değerler ve Amaçlar",
+          href: "/corporate/vision",
+        },
+        { title: "Politikalar", href: "/corporate/our-values" },
+        {
+          title: "Çalışma Prensiplerimiz",
+          href: "/corporate/our-working-principles",
+        },
+        {
+          title: "Hedeflerimiz",
+          href: "/corporate/our-goals",
+        },
       ],
     },
     {
