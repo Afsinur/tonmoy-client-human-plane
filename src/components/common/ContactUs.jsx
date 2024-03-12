@@ -77,7 +77,7 @@ function ContactUs() {
               </div>
               <div className="w-full grid place-content-center text-lg">
                 <ReCAPTCHA
-                  sitekey="6Lf2BJYpAAAAALKamJh35QzcXrbwIAbz3DivFd-r"
+                  sitekey="6LeqD5YpAAAAAACGKKFNMb4NPUKrFkjqJ8QJx7-L"
                   onChange={onChange}
                 />
               </div>
