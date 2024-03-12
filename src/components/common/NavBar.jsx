@@ -78,9 +78,9 @@ function NavBar() {
                 {itm.reactLink ? (
                   <Link to={itm.href}>{itm.title}</Link>
                 ) : (
-                  <a href={itm.href} className="py-4">
+                  <Link to={itm.href} className="py-4">
                     {itm.title}
-                  </a>
+                  </Link>
                 )}
 
                 {itm.subTitles && (
@@ -93,7 +93,7 @@ function NavBar() {
                           <ul className="grid gap-4 text-sm">
                             {itm.subTitles.map((subItm, subI) => (
                               <li key={subI}>
-                                <a href={subItm.href}>{subItm.title}</a>
+                                <Link to={subItm.href}>{subItm.title}</Link>
                               </li>
                             ))}
                           </ul>
