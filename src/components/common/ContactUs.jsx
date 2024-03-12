@@ -76,7 +76,10 @@ function ContactUs() {
                 </p>
               </div>
               <div className="w-full grid place-content-center text-lg">
-                <ReCAPTCHA sitekey="Your client site key" onChange={onChange} />
+                <ReCAPTCHA
+                  sitekey="6Lf2BJYpAAAAALKamJh35QzcXrbwIAbz3DivFd-r"
+                  onChange={onChange}
+                />
               </div>
               <input
                 type="submit"
