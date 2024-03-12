@@ -4,6 +4,7 @@ import Details from "./Details";
 import Footer from "../home/Footer";
 import DetailsCard from "./DetailsCard";
 import PushingTheLimits from "../home/PushingTheLimits";
+import ContactUs from "../common/ContactUs";
 
 function Slider2MoreInfo() {
   return (
@@ -12,6 +13,7 @@ function Slider2MoreInfo() {
       <Details />
       <DetailsCard />
       <PushingTheLimits />
+      <ContactUs />
       <Footer />
     </>
   );
