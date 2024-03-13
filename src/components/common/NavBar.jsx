@@ -51,7 +51,7 @@ function NavBar() {
     },
     {
       title: "İletişim",
-      href: "#",
+      href: "/contact-us",
     },
     {
       title: "Medya",

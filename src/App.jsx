@@ -10,6 +10,7 @@ import OurValues from "./components/corporate/OurValues";
 import OurWorkingPrinciples from "./components/corporate/OurWorkingPrinciples";
 import OurGoals from "./components/corporate/OurGoals";
 import Corporate from "./components/corporate/Corporate";
+import ContactPage from "./components/contact-us/ContactPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             />
             <Route path="our-goals" element={<OurGoals />} />
           </Route>
+          <Route path="/contact-us" element={<ContactPage />} />
         </Routes>
       </BrowserRouter>
     </div>
