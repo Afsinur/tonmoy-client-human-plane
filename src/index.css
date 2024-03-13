@@ -61,6 +61,22 @@ body {
   display: block;
 }
 
+.our-founder-img img {
+  z-index: 3;
+}
+.our-founder-img::after {
+  content: "1";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(10px);
+  background: yellow;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: 2;
+}
+
 @keyframes pulse-animation {
   0% {
     transform: translate(-50%, -50%) scale(0);
