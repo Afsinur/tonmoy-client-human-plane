@@ -9,6 +9,7 @@ import Vision from "./components/corporate/Vision";
 import OurValues from "./components/corporate/OurValues";
 import OurWorkingPrinciples from "./components/corporate/OurWorkingPrinciples";
 import OurGoals from "./components/corporate/OurGoals";
+import Corporate from "./components/corporate/Corporate";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/info/slider-2" element={<Slider2MoreInfo />} />
           <Route path="/survey" element={<Survey />} />
-          <Route path="/corporate">
+          <Route path="/corporate" element={<Corporate />}>
             <Route index element={<AboutUs />} />
             <Route path="our-founder" element={<OurFounder />} />
             <Route path="vision" element={<Vision />} />
