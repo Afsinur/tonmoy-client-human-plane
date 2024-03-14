@@ -9,15 +9,15 @@ function AboutUs() {
   }, []);
   return (
     <>
-      <h2 className="text-white text-4xl">Hakkımızda</h2>
+      <h2 className="text-slate-300 text-4xl">Hakkımızda</h2>
 
-      <p className="text-white text-xl">
+      <p className="text-slate-400 text-xl">
         Tuipaş, mühendisler eşliğinde teknoloji ağırlıklı çalışmalar
         sürdürmektedir. İcatları ile Türkiye ekonomisine katkı sağlamakla
         beraber uluslararası pazarda yer almayı hedeflemektedir.
       </p>
 
-      <p className="text-white text-xl">
+      <p className="text-slate-400 text-xl">
         Türkiye´nin bağımsızlaşması adına yerli ve milli projeler üzerinde
         çalışan Tuipaş, Türkiye´nin ilk Uçan İnsan Projesini hayata
         geçirmektedir. Geniş çaplı Ar-Ge çalışmaları sonucunda Türk milletine bu

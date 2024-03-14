@@ -20,11 +20,11 @@ function OurFounder() {
                 className="relative w-full h-full rounded-full object-cover"
               />
             </div>
-            <h2 className="text-white text-7xl text-nowrap">Tuğçe ŞAHİN</h2>
+            <h2 className="text-slate-300 text-7xl text-nowrap">Tuğçe ŞAHİN</h2>
           </div>
 
           <div className="grid gap-4 -translate-y-1/4">
-            <p className="text-white text-xl">
+            <p className="text-slate-400 text-xl">
               Pedagog ve psikoloji üzerine Yüksekokulunu tamamlamasının ardından
               Hamburg Üniversitesinde Hukuk Fakültesine girmiştir.
               Üniversitedeyken Erasmus programı kapsamında bir sene İstanbul
@@ -35,7 +35,7 @@ function OurFounder() {
               yapmıştır.
             </p>
 
-            <p className="text-white text-xl">
+            <p className="text-slate-400 text-xl">
               2019 yılında Almanya‘da Junges Muslimisches Netzwerk topluluğunu
               kurmuştur. Bu toplulukta hat dersi gibi farklı faaliyetler
               düzenlenerek Avrupa‘da yaşayan Müslümanların kimliklerini

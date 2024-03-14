@@ -10,16 +10,16 @@ function OurWorkingPrinciples() {
 
   return (
     <>
-      <h2 className="text-white text-4xl">Çalışma Prensiplerimiz</h2>
+      <h2 className="text-slate-300 text-4xl">Çalışma Prensiplerimiz</h2>
 
-      <p className="text-white text-xl">
+      <p className="text-slate-400 text-xl">
         Hedeflerimiz doğrultusunda Tuipaş olarak çalışmalarımızdan doğan
         sorumluluğu, tüm çabamızla üstlenmeye ve ilerlemeye gayret gösteriyoruz.
       </p>
 
-      <h2 className="text-white text-4xl">Disiplin</h2>
+      <h2 className="text-slate-300 text-4xl">Disiplin</h2>
 
-      <p className="text-white text-xl">
+      <p className="text-slate-400 text-xl">
         Çaba ve azim ne kadar çok olursa olsun, disiplinin olmadığı bir yerde,
         bir adım ilerlemek oldukça zordur. Ülkemizi daha iyi yarınlara
         taşıyabilmek için çalışma alanlarımızı genişletiyor ve süreçleri
@@ -29,9 +29,9 @@ function OurWorkingPrinciples() {
         hazırlanan sözleşmeler çerçevesinde yürütmektir.
       </p>
 
-      <h2 className="text-white text-4xl">Kişisel Gelişim ve Özgüven</h2>
+      <h2 className="text-slate-300 text-4xl">Kişisel Gelişim ve Özgüven</h2>
 
-      <p className="text-white text-xl">
+      <p className="text-slate-400 text-xl">
         Kişisel yeteneklerimizin en üst sınırına kadar kendimizi gelirştirmeyi
         hakkımız ve görevimiz olarak biliriz. Bu anlamda kendimize güvenmesek
         şayet içimizdeki hazineyi sergileyemeyiz ve olduğumuz yerde kalırız.
@@ -41,9 +41,9 @@ function OurWorkingPrinciples() {
         hedeflemekteyiz.
       </p>
 
-      <h2 className="text-white text-4xl">Sorumluluk Sahibi</h2>
+      <h2 className="text-slate-300 text-4xl">Sorumluluk Sahibi</h2>
 
-      <p className="text-white text-xl">
+      <p className="text-slate-400 text-xl">
         Tarihimize sahip çıkmak ve geleceğimizin temelini kurmak, her birimize
         düşen bir görev ve aynı zamanda haktır. Bu görevi üstlenmek ve
         hakkımızdan istifade etmek, bugünün topraklarını inşa eden aziz

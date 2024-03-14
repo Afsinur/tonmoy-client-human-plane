@@ -11,9 +11,9 @@ function OurGoals() {
 
   return (
     <>
-      <h2 className="text-white text-4xl">Hedeflerimiz</h2>
+      <h2 className="text-slate-300 text-4xl">Hedeflerimiz</h2>
 
-      <p className="text-white text-xl">
+      <p className="text-slate-400 text-xl">
         Tuipaş kurumu olarak gelecek potansiyeli yüksek ürünlerin ülke içinde
         üretim kapasitesinin geliştirilmesini hedefliyoruz. Bağımlılığın
         azaltılması anlamında istikrarlı bir şekilde ilerlemeye çaba gösteriyor
