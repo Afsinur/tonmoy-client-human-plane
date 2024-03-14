@@ -5,97 +5,150 @@ import {
   FaInstagram,
   FaPinterestP,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <div className="bg-[#142143] text-white py-20">
-      <div className="container mx-auto grid gap-8">
-        <div className="flex gap-8 justify-between">
-          <div>
-            <div className="grid gap-4">
-              <img src="/logo-white.png" alt="image" className="w-60" />
-              <p className="text-lg capitalize font-semibold">
-                Private jet charters save your time and <br /> give you comfort.
-              </p>
-            </div>
-          </div>
+      <div className="container mx-auto grid gap-16">
+        <div className="grid gap-4 grid-cols-5">
+          <div className="flex flex-col gap-6">
+            <h2 className="text-sm text-slate-100 font-semibold uppercase">
+              corporate
+            </h2>
 
-          <div className="grid gap-6">
-            <h2 className="text-lg text-slate-100 font-semibold">Explore</h2>
-
-            <ul className="text-slate-400 grid gap-2">
+            <ul className="text-sm text-slate-400 font-light grid gap-2">
               <li>
-                <a href="#">About</a>
+                <a href="#" className="hover:text-slate-500">
+                  About
+                </a>
               </li>
               <li>
-                <a href="#">Private Jet Catering</a>
+                <a href="#" className="hover:text-slate-500">
+                  Private Jet Catering
+                </a>
               </li>
               <li>
-                <a href="#">Destinations</a>
+                <a href="#" className="hover:text-slate-500">
+                  Destinations
+                </a>
               </li>
               <li>
-                <a href="#">Flight Search</a>
+                <a href="#" className="hover:text-slate-500">
+                  Flight Search
+                </a>
               </li>
               <li>
-                <a href="#">Book Flight</a>
+                <a href="#" className="hover:text-slate-500">
+                  Book Flight
+                </a>
               </li>
             </ul>
           </div>
 
-          <div className="grid gap-6">
-            <h2 className="text-lg text-slate-100 font-semibold">Links</h2>
+          <div className="flex flex-col gap-6">
+            <h2 className="text-sm text-slate-100 font-semibold uppercase">
+              our solutions
+            </h2>
 
-            <ul className="text-slate-400 grid gap-2">
+            <ul className="text-sm text-slate-400 font-light grid gap-2">
               <li>
-                <a href="#">About</a>
+                <a href="#" className="hover:text-slate-500">
+                  About
+                </a>
               </li>
               <li>
-                <a href="#">Private Jet Catering</a>
+                <a href="#" className="hover:text-slate-500">
+                  Private Jet Catering
+                </a>
               </li>
               <li>
-                <a href="#">Destinations</a>
+                <a href="#" className="hover:text-slate-500">
+                  Destinations
+                </a>
               </li>
               <li>
-                <a href="#">Flight Search</a>
-              </li>
-              <li>
-                <a href="#">Book Flight</a>
+                <a href="#" className="hover:text-slate-500">
+                  Flight Search
+                </a>
               </li>
             </ul>
           </div>
 
-          <div className="grid gap-6">
-            <h2 className="text-lg text-slate-100 font-semibold">Contact</h2>
+          <div className="flex flex-col gap-6">
+            <h2 className="text-sm text-slate-100 font-semibold uppercase">
+              innovation
+            </h2>
 
-            <ul className="text-slate-400 grid gap-2">
+            <ul className="text-sm text-slate-400 font-light grid gap-2">
               <li>
-                <a href="#">About</a>
+                <a href="#" className="hover:text-slate-500">
+                  About
+                </a>
               </li>
               <li>
-                <a href="#">Private Jet Catering</a>
+                <a href="#" className="hover:text-slate-500">
+                  Private Jet Catering
+                </a>
               </li>
               <li>
-                <a href="#">Destinations</a>
+                <a href="#" className="hover:text-slate-500">
+                  Destinations
+                </a>
               </li>
               <li>
-                <a href="#">Flight Search</a>
-              </li>
-              <li>
-                <a href="#">Book Flight</a>
+                <a href="#" className="hover:text-slate-500">
+                  Flight Search
+                </a>
               </li>
             </ul>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-sm text-slate-100 font-semibold uppercase">
+              careers
+            </h2>
+
+            <ul className="text-sm text-slate-400 font-light grid gap-2">
+              <li>
+                <a href="#" className="hover:text-slate-500">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-slate-500">
+                  Private Jet Catering
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-slate-500">
+                  Destinations
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-sm text-slate-100 font-semibold uppercase">
+              news
+            </h2>
+
+            <Link to="/contact-us" className="uppercase text-base font-bold">
+              contact us
+            </Link>
           </div>
         </div>
 
-        <hr className="border border-slate-500" />
+        <div className="grid grid-cols-3 gap-4">
+          <div></div>
 
-        <div className="flex items-center justify-between">
-          <p className="text-slate-200 capitalize font-semibold">
-            @copyright 2024 TUIPAS.
-          </p>
+          <div></div>
 
-          <div>
-            <ul className="flex items-center gap-8">
+          <div className="grid gap-4">
+            <h2 className="text-center text-slate-200 uppercase font-medium">
+              follow us
+            </h2>
+            <ul className="flex items-center justify-center gap-8">
               <li>
                 <a href="#">
                   <FaFacebookF />
@@ -118,6 +171,20 @@ function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        <hr className="border-1 border-slate-700" />
+
+        <div className="grid grid-cols-3 gap-4 items-center">
+          <div>
+            <img src="/logo-white.png" alt="image" width="w-[40px]" />
+          </div>
+
+          <p className="text-slate-200 capitalize font-light text-sm text-center">
+            @copyright 2024 TUIPAS.
+          </p>
+
+          <div></div>
         </div>
       </div>
     </div>

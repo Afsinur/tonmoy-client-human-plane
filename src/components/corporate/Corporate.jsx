@@ -1,22 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../common/NavBar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useOutletContext } from "react-router-dom";
 import Footer from "../home/Footer";
 
 function Corporate() {
+  const [imageSrc, setImageSrc] = useState(null);
+  const [title, setTitle] = useState(null);
+
   return (
     <div>
-      <div className="bg-[#142143]">
+      <div
+        className={`w-full bg-center bg-cover grid h-[60vh]`}
+        style={{ backgroundImage: `url(${imageSrc})` }}
+      >
         <NavBar />
 
-        <div className="container mx-auto min-h-[40vh] py-20 flex flex-col gap-6">
-          <Outlet />
+        <div className="container mx-auto flex items-center">
+          <h2 className="text-white text-4xl">{title}</h2>
         </div>
-
-        <Footer />
       </div>
+
+      <div className="bg-[#142143]">
+        <div className="container mx-auto min-h-[40vh] py-20 flex flex-col gap-6">
+          <Outlet context={{ setImageSrc, setTitle }} />
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
+}
+
+export function srcChangeFn() {
+  return useOutletContext();
 }
 
 export default Corporate;

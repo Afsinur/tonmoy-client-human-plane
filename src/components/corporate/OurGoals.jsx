@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../common/NavBar";
+import { srcChangeFn } from "./Corporate";
 
 function OurGoals() {
+  const { setImageSrc, setTitle } = srcChangeFn();
+  useEffect(() => {
+    setImageSrc("/about-us-bg.jpg");
+    setTitle("Hedeflerimiz");
+  }, []);
+
   return (
     <>
       <h2 className="text-white text-4xl">Hedeflerimiz</h2>
