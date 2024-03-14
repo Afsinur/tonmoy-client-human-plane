@@ -4,7 +4,7 @@ import { srcChangeFn } from "./Corporate";
 function Vision() {
   const { setImageSrc, setTitle } = srcChangeFn();
   useEffect(() => {
-    setImageSrc("/about-us-bg.jpg");
+    setImageSrc("/vision-bg.jpg");
     setTitle("Vizyon");
   }, []);
 

@@ -4,7 +4,7 @@ import { srcChangeFn } from "./Corporate";
 function OurWorkingPrinciples() {
   const { setImageSrc, setTitle } = srcChangeFn();
   useEffect(() => {
-    setImageSrc("/about-us-bg.jpg");
+    setImageSrc("/working-principles-bg.jpg");
     setTitle("Çalışma Prensiplerimiz");
   }, []);
 

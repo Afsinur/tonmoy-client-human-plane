@@ -5,7 +5,7 @@ import { srcChangeFn } from "./Corporate";
 function OurGoals() {
   const { setImageSrc, setTitle } = srcChangeFn();
   useEffect(() => {
-    setImageSrc("/about-us-bg.jpg");
+    setImageSrc("/goals-bg.jpg");
     setTitle("Hedeflerimiz");
   }, []);
 

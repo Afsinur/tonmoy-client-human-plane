@@ -11,7 +11,9 @@ function Corporate() {
     <div>
       <div
         className={`w-full bg-center bg-cover grid h-[60vh]`}
-        style={{ backgroundImage: `url(${imageSrc})` }}
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${imageSrc})`,
+        }}
       >
         <NavBar />
 

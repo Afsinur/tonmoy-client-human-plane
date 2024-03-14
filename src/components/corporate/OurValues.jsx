@@ -4,7 +4,7 @@ import { srcChangeFn } from "./Corporate";
 function OurValues() {
   const { setImageSrc, setTitle } = srcChangeFn();
   useEffect(() => {
-    setImageSrc("/about-us-bg.jpg");
+    setImageSrc("/values-bg.jpg");
     setTitle("Değerlerimiz");
   }, []);
 

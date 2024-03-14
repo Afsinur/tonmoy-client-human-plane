@@ -4,25 +4,26 @@ import { srcChangeFn } from "./Corporate";
 function OurFounder() {
   const { setImageSrc, setTitle } = srcChangeFn();
   useEffect(() => {
-    setImageSrc("/about-us-bg.jpg");
-    setTitle("Tuğçe ŞAHİN");
+    setImageSrc("/our-founder-bg.jpg");
+    setTitle("Tuğçe");
   }, []);
 
   return (
     <>
       <div>
-        <div className="our-founder-img relative float-right w-[300px] h-[300px] rounded-full">
-          <img
-            src="/our-founder.jpg"
-            alt="image"
-            className="relative w-full h-full rounded-full object-cover"
-          />
-        </div>
+        <div className="grid">
+          <div className="flex gap-8">
+            <div className="our-founder-img relative w-[300px] rounded-full -translate-y-1/2">
+              <img
+                src="/our-founder.jpg"
+                alt="image"
+                className="relative w-full h-full rounded-full object-cover"
+              />
+            </div>
+            <h2 className="text-white text-7xl text-nowrap">Tuğçe ŞAHİN</h2>
+          </div>
 
-        <div className="grid gap-8">
-          <div className="grid gap-20">
-            <h2 className="text-white text-7xl">Tuğçe ŞAHİN</h2>
-
+          <div className="grid gap-4 -translate-y-1/4">
             <p className="text-white text-xl">
               Pedagog ve psikoloji üzerine Yüksekokulunu tamamlamasının ardından
               Hamburg Üniversitesinde Hukuk Fakültesine girmiştir.
@@ -33,19 +34,20 @@ function OurFounder() {
               Ingiltere’de özel hukuk ağırlıklı avukatlık ofisinde staj
               yapmıştır.
             </p>
-          </div>
 
-          <p className="text-white text-xl">
-            2019 yılında Almanya‘da Junges Muslimisches Netzwerk topluluğunu
-            kurmuştur. Bu toplulukta hat dersi gibi farklı faaliyetler
-            düzenlenerek Avrupa‘da yaşayan Müslümanların kimliklerini korumaları
-            amaçlanmıştır. Yaklaşık bir sene faaliyet göstermesinin ardından
-            pandemi nedeniyle çalışmalar sonlanmıştır. Bunun ardından 6 Şubat
-            2023 tarihinde yaşanan ve Türkiye’yi derinden sarsan Kahramanmaraş
-            depremi sonucunda Tuipaş çalışmalarına başlamıştır. Özellikle
-            beklenen büyük İstanbul depreminin gerçekleşmesi halinde benzer bir
-            acının yaşanmaması adına Cankuşu projesini ortaya koymuştur.
-          </p>
+            <p className="text-white text-xl">
+              2019 yılında Almanya‘da Junges Muslimisches Netzwerk topluluğunu
+              kurmuştur. Bu toplulukta hat dersi gibi farklı faaliyetler
+              düzenlenerek Avrupa‘da yaşayan Müslümanların kimliklerini
+              korumaları amaçlanmıştır. Yaklaşık bir sene faaliyet göstermesinin
+              ardından pandemi nedeniyle çalışmalar sonlanmıştır. Bunun ardından
+              6 Şubat 2023 tarihinde yaşanan ve Türkiye’yi derinden sarsan
+              Kahramanmaraş depremi sonucunda Tuipaş çalışmalarına başlamıştır.
+              Özellikle beklenen büyük İstanbul depreminin gerçekleşmesi halinde
+              benzer bir acının yaşanmaması adına Cankuşu projesini ortaya
+              koymuştur.
+            </p>
+          </div>
         </div>
       </div>
     </>

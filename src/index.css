@@ -65,7 +65,7 @@ body {
   z-index: 3;
 }
 .our-founder-img::after {
-  content: "1";
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
