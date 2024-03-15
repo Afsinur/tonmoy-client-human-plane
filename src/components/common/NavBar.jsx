@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
+  const navItSelf = useRef();
+  const [navClientHeight, setNavClientHeight] = useState(null);
+
   const uls = [
     {
       title: "Kurumsal",
@@ -64,9 +67,16 @@ function NavBar() {
       reactLink: true,
     },
   ];
+
+  useEffect(() => {
+    setNavClientHeight(navItSelf.current.clientHeight);
+  }, []);
   return (
     <div>
-      <div className="relative z-[5] bg-gradient-to-b from-black to-transparent">
+      <div
+        ref={navItSelf}
+        className="relative z-[11] bg-gradient-to-b from-black to-transparent"
+      >
         <div className="container mx-auto flex items-center justify-between">
           <Link to="/">
             <img src="/logo-white.png" alt="image" className="w-52" />
@@ -84,16 +94,24 @@ function NavBar() {
                 )}
 
                 {itm.subTitles && (
-                  <div className="transition-all duration-300 group-hover:opacity-100 block min-w-[300px] bg-white text-slate-600 absolute top-[35px] right-0 opacity-0 scale-y-0 group-hover:scale-y-100 origin-top">
-                    <div className="grid grid-cols-2">
-                      <div className="bg-[url(/get-to-know-us-right-img.jpg)] bg-cover bg-center"></div>
+                  <div
+                    style={{ top: `${navClientHeight - 10}px` }}
+                    className={`transition-all duration-300 block w-full bg-white text-slate-600 fixed left-0 h-0 group-hover:h-[70vh] overflow-hidden`}
+                  >
+                    <div className="grid grid-cols-3 h-full">
+                      <div className="bg-[url(/get-to-know-us-right-img.jpg)] bg-cover bg-center h-full"></div>
 
-                      <div>
-                        <div className="p-4">
-                          <ul className="grid gap-4 text-sm">
+                      <div className="col-span-2">
+                        <div>
+                          <ul className="text-sm">
                             {itm.subTitles.map((subItm, subI) => (
                               <li key={subI}>
-                                <Link to={subItm.href}>{subItm.title}</Link>
+                                <Link
+                                  to={subItm.href}
+                                  className="px-10 py-4 block hover:bg-gray-100 transition-colors"
+                                >
+                                  {subItm.title}
+                                </Link>
                               </li>
                             ))}
                           </ul>
