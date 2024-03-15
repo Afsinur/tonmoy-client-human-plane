@@ -10,37 +10,37 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div className="bg-[#142143] text-white py-20">
-      <div className="container mx-auto grid gap-16">
+      <div className="container mx-auto grid gap-8">
         <div className="grid gap-4 grid-cols-5">
           <div className="flex flex-col gap-6">
             <h2 className="text-sm text-slate-100 font-semibold uppercase">
-              corporate
+              ŞİRKET
             </h2>
 
             <ul className="text-sm text-slate-400 font-light grid gap-2">
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  About
+                  Hakkında
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Private Jet Catering
+                  Özel Jet Yemek Servisi
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Destinations
+                  Hedefler
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Flight Search
+                  Uçuş Ara
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Book Flight
+                  Uçuşu Rezerve Et
                 </a>
               </li>
             </ul>
@@ -48,28 +48,28 @@ function Footer() {
 
           <div className="flex flex-col gap-6">
             <h2 className="text-sm text-slate-100 font-semibold uppercase">
-              our solutions
+              ÇÖZÜMLERİMİZ
             </h2>
 
             <ul className="text-sm text-slate-400 font-light grid gap-2">
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  About
+                  Hakkında
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Private Jet Catering
+                  Özel Jet Yemek Servisi
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Destinations
+                  Hedefler
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Flight Search
+                  Uçuş Ara
                 </a>
               </li>
             </ul>
@@ -77,28 +77,28 @@ function Footer() {
 
           <div className="flex flex-col gap-6">
             <h2 className="text-sm text-slate-100 font-semibold uppercase">
-              innovation
+              YENİLİK
             </h2>
 
             <ul className="text-sm text-slate-400 font-light grid gap-2">
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  About
+                  Hakkında
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Private Jet Catering
+                  Özel Jet Yemek Servisi
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Destinations
+                  Hedefler
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Flight Search
+                  Uçuş Ara
                 </a>
               </li>
             </ul>
@@ -106,23 +106,23 @@ function Footer() {
 
           <div className="flex flex-col gap-6">
             <h2 className="text-sm text-slate-100 font-semibold uppercase">
-              careers
+              KARİYER
             </h2>
 
             <ul className="text-sm text-slate-400 font-light grid gap-2">
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  About
+                  Hakkında
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Private Jet Catering
+                  Özel Jet Yemek Servisi
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-500">
-                  Destinations
+                  Hedefler
                 </a>
               </li>
             </ul>
@@ -130,23 +130,47 @@ function Footer() {
 
           <div className="flex flex-col gap-6">
             <h2 className="text-sm text-slate-100 font-semibold uppercase">
-              news
+              HABERLER
             </h2>
 
             <Link to="/contact-us" className="uppercase text-base font-bold">
-              contact us
+              BİZİMLE İLETİŞİME GEÇİN
             </Link>
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
-          <div></div>
+        <div className="grid grid-cols-4 gap-4">
+          <div className="flex gap-4 items-center">
+            <div>
+              <img src="/footer/tskgv.png" alt="image" />
+            </div>
+            <div className="text-sm text-slate-500">
+              TUIPAS, bir kuruluştur.
+              <br />
+              TUIPAS, Türk Silahlı Kuvvetleri Vakfı'nın bir kuruluşudur.
+            </div>
+          </div>
 
-          <div></div>
+          <div className="grid gap-4 col-span-2">
+            <h2 className="text-center text-slate-200 uppercase font-medium">
+              ŞİRKETLERİMİZ
+            </h2>
+
+            <div className="grid grid-cols-5 gap-4 items-center">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((itm) => (
+                <div
+                  className={`w-full h-[24px] bg-center bg-contain bg-no-repeat`}
+                  style={{
+                    backgroundImage: `url(/footer/subsidiaries/${itm}.svg)`,
+                  }}
+                ></div>
+              ))}
+            </div>
+          </div>
 
           <div className="grid gap-4">
             <h2 className="text-center text-slate-200 uppercase font-medium">
-              follow us
+              BİZİ TAKİP EDİN
             </h2>
             <ul className="flex items-center justify-center gap-8">
               <li>
@@ -177,14 +201,24 @@ function Footer() {
 
         <div className="grid grid-cols-3 gap-4 items-center">
           <div>
-            <img src="/logo-white.png" alt="image" width="w-[40px]" />
+            <img src="/logo-white.png" alt="image" className="w-3/4" />
           </div>
 
-          <p className="text-slate-200 capitalize font-light text-sm text-center">
+          <p className="text-slate-500 capitalize font-light text-sm text-center">
             @copyright 2024 TUIPAS.
           </p>
 
-          <div></div>
+          <div>
+            <div className="flex gap-4 items-center">
+              <div>
+                <img src="/footer/hk_k.svg" alt="image" />
+              </div>
+              <div className="text-sm text-slate-500">
+                Bu web sitesi tarafından korunmaktadır <br />
+                <Link to="/">TUIPAS</Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

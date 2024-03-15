@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28.257" height="34.821" viewBox="0 0 28.257 34.821">
+  <g id="Group_3015" data-name="Group 3015" transform="translate(-562.5 -666.5)">
+    <path id="Icon_feather-shield" data-name="Icon feather-shield" d="M19.129,35.821s13.129-6.564,13.129-16.411V7.923L19.129,3,6,7.923V19.411C6,29.257,19.129,35.821,19.129,35.821Z" transform="translate(557.5 664.5)" fill="none" stroke="#8fa3b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="Icon_feather-lock" data-name="Icon feather-lock" transform="translate(570.295 675.232)">
+      <path id="Path_688" data-name="Path 688" d="M5.907,16.5H15.76a1.407,1.407,0,0,1,1.407,1.407v4.926a1.407,1.407,0,0,1-1.407,1.407H5.907A1.407,1.407,0,0,1,4.5,22.833V17.907A1.407,1.407,0,0,1,5.907,16.5Z" transform="translate(-4.5 -10.167)" fill="none" stroke="#8fa3b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_689" data-name="Path 689" d="M10.5,9.333V6.519a3.519,3.519,0,0,1,7.037,0V9.333" transform="translate(-7.685 -3)" fill="none" stroke="#8fa3b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
