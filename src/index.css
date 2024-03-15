@@ -77,6 +77,14 @@ body {
   z-index: 2;
 }
 
+.awssld {
+  --content-background-color: transparent !important;
+}
+
+.awssld__content > img {
+  object-fit: contain !important;
+}
+
 @keyframes pulse-animation {
   0% {
     transform: translate(-50%, -50%) scale(0);
