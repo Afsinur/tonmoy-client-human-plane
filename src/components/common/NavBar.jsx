@@ -1,10 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-  const navItSelf = useRef();
-  const [navClientHeight, setNavClientHeight] = useState(null);
-
   const uls = [
     {
       title: "Kurumsal",
@@ -68,15 +65,9 @@ function NavBar() {
     },
   ];
 
-  useEffect(() => {
-    setNavClientHeight(navItSelf.current.clientHeight);
-  }, []);
   return (
     <div>
-      <div
-        ref={navItSelf}
-        className="relative z-[11] bg-gradient-to-b from-black to-transparent"
-      >
+      <div className="relative z-[11] bg-gradient-to-b from-black to-transparent h-[67px]">
         <div className="container mx-auto flex items-center justify-between">
           <Link to="/">
             <img src="/logo-white.png" alt="image" className="w-52" />
@@ -95,7 +86,7 @@ function NavBar() {
 
                 {itm.subTitles && (
                   <div
-                    style={{ top: `${navClientHeight - 10}px` }}
+                    style={{ top: `57px` }}
                     className={`transition-all duration-300 block w-full bg-white text-slate-600 fixed left-0 h-0 group-hover:h-[70vh] overflow-hidden`}
                   >
                     <div className="grid grid-cols-3 h-full">
