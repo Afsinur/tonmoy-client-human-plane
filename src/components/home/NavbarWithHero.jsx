@@ -114,7 +114,7 @@ function Hero({ heroH2, active, setActive, page }) {
             to="/info/slider-2"
             className="flex items-center gap-4 capitalize absolute bottom-0 right-0 -translate-x-1/2 -translate-y-full z-[7] bg-[#1e73bd] text-white px-8 py-4 rounded-xl shadow-lg text-xl mix-blend-difference"
           >
-            more information <FaArrowRight />
+            Daha Fazla Bilgi <FaArrowRight />
           </Link>
         )}
 
