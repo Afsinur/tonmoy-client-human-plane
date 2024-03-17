@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { GoTriangleLeft, GoTriangleRight } from "react-icons/go";
+import { motion } from "framer-motion";
 
 function PushingTheLimits() {
   const dragBarParent = useRef();
@@ -88,15 +89,29 @@ function PushingTheLimits() {
         </div>
 
         <div className="select-none grid gap-8 absolute top-1/2 left-0 -translate-y-full text-white z-20">
-          <h2 className="text-5xl font-semibold">
-            Pushing <br />
-            the Limits
-          </h2>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }} // Initial state of the element
+            whileInView={{ opacity: 1, x: 0 }} // Animation state
+            transition={{ type: "spring", duration: 0.5 }} // Transition duration
+            viewport={{ once: false }}
+          >
+            <h2 className="text-5xl font-semibold">
+              Pushing <br />
+              the Limits
+            </h2>
+          </motion.div>
 
-          <p>
-            We are proud of achieving world-class <br /> performance with an
-            integrated, complete system.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }} // Initial state of the element
+            whileInView={{ opacity: 1, x: 0 }} // Animation state
+            transition={{ type: "spring", duration: 0.5 }} // Transition duration
+            viewport={{ once: false }}
+          >
+            <p>
+              We are proud of achieving world-class <br /> performance with an
+              integrated, complete system.
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -10,17 +10,13 @@ function NavBar() {
         { title: "Hakkımızda", href: "/corporate" },
         { title: "Kurucumuz kimdir?", href: "/corporate/our-founder" },
         {
-          title: "Vizyon, Misyon, Değerler ve Amaçlar",
+          title: "Vizyon & Hedeflerimiz",
           href: "/corporate/vision",
         },
-        { title: "Politikalar", href: "/corporate/our-values" },
+        { title: "Değerlerimiz", href: "/corporate/our-values" },
         {
           title: "Çalışma Prensiplerimiz",
           href: "/corporate/our-working-principles",
-        },
-        {
-          title: "Hedeflerimiz",
-          href: "/corporate/our-goals",
         },
       ],
     },
@@ -56,7 +52,7 @@ function NavBar() {
     {
       title: "Medya",
       href: "#",
-      subTitles: [{ title: "Basın Yayın", href: "#" }],
+      subTitles: [{ title: "Basın Yayın", href: "/media/home" }],
     },
     {
       title: "survey",
@@ -87,7 +83,7 @@ function NavBar() {
                 {itm.subTitles && (
                   <div
                     style={{ top: `57px` }}
-                    className={`transition-all duration-300 block w-full bg-white text-slate-600 fixed left-0 h-0 group-hover:h-[70vh] overflow-hidden`}
+                    className={`transition-all duration-300 block w-full bg-white text-slate-600 fixed left-0 h-0 group-hover:h-[52vh] overflow-hidden`}
                   >
                     <div className="grid grid-cols-3 h-full">
                       <div className="bg-[url(/get-to-know-us-right-img.jpg)] bg-cover bg-center h-full"></div>

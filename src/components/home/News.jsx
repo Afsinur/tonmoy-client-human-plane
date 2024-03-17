@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function News() {
   const news = [
@@ -11,7 +12,7 @@ function News() {
       voluptatum, similique earum eius aperiam odio, nostrum perferendis
       vero corporis accusantium.
       `,
-      src: "./news-video.mp4",
+      src: "/news-video.mp4",
       date: "24 February 2024",
       type: "video",
     },
@@ -24,7 +25,7 @@ function News() {
       voluptatum, similique earum eius aperiam odio, nostrum perferendis
       vero corporis accusantium.
       `,
-      src: "./news-1.jpg",
+      src: "/news-1.jpg",
       date: "24 February 2024",
       type: "image",
     },
@@ -37,7 +38,7 @@ function News() {
       voluptatum, similique earum eius aperiam odio, nostrum perferendis
       vero corporis accusantium.
       `,
-      src: "./news-1.jpg",
+      src: "/news-1.jpg",
       date: "24 February 2024",
       type: "image",
     },
@@ -50,25 +51,41 @@ function News() {
       voluptatum, similique earum eius aperiam odio, nostrum perferendis
       vero corporis accusantium.
       `,
-      src: "./news-1.jpg",
+      src: "/news-1.jpg",
       date: "24 February 2024",
       type: "image",
     },
   ];
-
   return (
     <div className="bg-[#142143]">
       <div className="container mx-auto py-40 text-white">
         <div className="grid gap-8">
-          <div>
-            <h2 className="uppercase text-4xl font-bold">News</h2>
+          <div style={{ overflow: "hidden" }}>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }} // Initial state of the element
+              whileInView={{ opacity: 1, x: 0 }} // Animation state
+              transition={{ type: "spring", duration: 0.5 }} // Transition duration
+              viewport={{ once: true }}
+            >
+              <h2 className="uppercase text-4xl font-bold">News</h2>
+            </motion.div>
           </div>
 
           <div className="grid grid-cols-2 gap-12 px-20">
             {news &&
               news.map((itm, i) => (
                 <div key={i}>
-                  <GridCards obj={itm} />
+                  <motion.div
+                    initial={{ opacity: 0, y: 100 }} // Initial state of the element
+                    whileInView={{ opacity: 1, y: 0 }} // Animation state
+                    transition={{
+                      type: "spring",
+                      duration: 0.5,
+                    }} // Transition duration
+                    viewport={{ once: true }}
+                  >
+                    <GridCards obj={itm} />
+                  </motion.div>
                 </div>
               ))}
           </div>
@@ -96,9 +113,39 @@ function GridCards({ obj }) {
           <img src={obj.src} alt="image" className="rounded-xl" />
         )}
         <p className="text-[#1e73be] font-semibold uppercase">News</p>
-        <h2 className="font-semibold uppercase">{obj.title}</h2>
-        <p className="text-sm">{obj.content}</p>
-        <p className="text-xs">{obj.date}</p>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} // Initial state of the element
+          whileInView={{ opacity: 1, y: 0 }} // Animation state
+          transition={{
+            type: "spring",
+            duration: 0.5,
+          }} // Transition duration
+          viewport={{ once: true }}
+        >
+          <h2 className="font-semibold uppercase">{obj.title}</h2>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} // Initial state of the element
+          whileInView={{ opacity: 1, y: 0 }} // Animation state
+          transition={{
+            type: "spring",
+            duration: 0.5,
+          }} // Transition duration
+          viewport={{ once: true }}
+        >
+          <p className="text-sm">{obj.content}</p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} // Initial state of the element
+          whileInView={{ opacity: 1, y: 0 }} // Animation state
+          transition={{
+            type: "spring",
+            duration: 0.5,
+          }} // Transition duration
+          viewport={{ once: true }}
+        >
+          <p className="text-xs">{obj.date}</p>
+        </motion.div>
       </div>
     </div>
   );

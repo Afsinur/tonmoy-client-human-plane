@@ -9,7 +9,6 @@ function Home() {
     <>
       <div>
         <NavbarWithHero page={"home"} />
-        <News />
         <PushingTheLimits />
         <Footer />
       </div>
