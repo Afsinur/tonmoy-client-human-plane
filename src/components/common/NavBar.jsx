@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function NavBar() {
   const uls = [
@@ -60,7 +60,21 @@ function NavBar() {
       reactLink: true,
     },
   ];
+  const navigate = useNavigate();
 
+  function handleClick(e) {
+    setTimeout(() => {
+      let sbC = e.target.closest("[data-sub-nav-container]");
+
+      sbC.classList.remove("block");
+      sbC.classList.add("hidden");
+
+      setTimeout(() => {
+        sbC.classList.add("block");
+        sbC.classList.remove("hidden");
+      }, 100);
+    }, 10);
+  }
   return (
     <div>
       <div className="relative z-[11] bg-gradient-to-b from-black to-transparent h-[67px]">
@@ -83,7 +97,8 @@ function NavBar() {
                 {itm.subTitles && (
                   <div
                     style={{ top: `57px` }}
-                    className={`transition-all duration-300 block w-full bg-white text-slate-600 fixed left-0 h-0 group-hover:h-[52vh] overflow-hidden`}
+                    data-sub-nav-container=""
+                    className={` transition-all duration-300 block w-full bg-white text-slate-600 fixed left-0 h-0 group-hover:h-[52vh] overflow-hidden`}
                   >
                     <div className="grid grid-cols-3 h-full">
                       <div className="bg-[url(/get-to-know-us-right-img.jpg)] bg-cover bg-center h-full"></div>
@@ -94,6 +109,7 @@ function NavBar() {
                             {itm.subTitles.map((subItm, subI) => (
                               <li key={subI}>
                                 <Link
+                                  onClick={(e) => handleClick(e)}
                                   to={subItm.href}
                                   className="px-10 py-4 block hover:bg-gray-100 transition-colors"
                                 >

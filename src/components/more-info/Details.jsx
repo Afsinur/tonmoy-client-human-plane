@@ -48,44 +48,6 @@ function Details() {
                 artırıyor ve yetkisiz kullanımı önlüyor. CANKUŞU bu sayede
                 kişiselleştirilmiş erişim kontrolünü sağlar.
               </p>
-
-              <h2 className="text-xl font-semibold">
-                Areas of Application and Technical Specifications
-              </h2>
-
-              <p className="text-lg text-slate-400">
-                Due to increasing natural disasters, there is a need for
-                innovative and rapid-response solutions. CANKUŞU, incorporating
-                advanced engineering with state-of-the-art propulsion systems,
-                aims to be a versatile and efficient mode of transportation
-                specially designed for first responders and relief workers.
-                Natural disasters, such as earthquakes, often lead to restricted
-                access and impassable terrain, hindering the timely deployment
-                of emergency personnel and aid to affected areas. CANKUŞU aims
-                to overcome these challenges by providing swift transportation.
-                Specifically, CANKUŞU has the capability to carry an additional
-                victim in emergencies, thereby expanding its utility and
-                potential impact on disaster relief efforts.
-              </p>
-
-              <p className="text-lg text-slate-400">
-                To ensure user safety during operation, CANKUŞU combines safety
-                features such as emergency parachutes, automatic stabilization
-                systems, and collision prevention mechanisms. Additionally,
-                there is fingerprint scanning for the ignition switch to ensure
-                safe and authorized operation. The fingerprint scanner is
-                integrated into the ignition switch mechanism. Before starting
-                CANKUŞU, the user needs to place their finger on the scanner,
-                which captures and analyzes their unique fingerprint patterns.
-                These biometric data are then compared with the database of
-                pre-registered authorized users. When the fingerprint matches an
-                authorized user's profile, the ignition switch is activated,
-                allowing the person to start CANKUŞU. This innovative feature
-                enhances security and prevents unauthorized use by leveraging
-                biometric technology to ensure that only authorized individuals
-                can operate CANKUŞU. Thus, CANKUŞU provides personalized access
-                control.
-              </p>
             </div>
           </div>
         </div>

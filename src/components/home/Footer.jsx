@@ -157,8 +157,9 @@ function Footer() {
             </h2>
 
             <div className="grid grid-cols-5 gap-4 items-center">
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((itm) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((itm, i) => (
                 <div
+                  key={i}
                   className={`w-full h-[24px] bg-center bg-contain bg-no-repeat`}
                   style={{
                     backgroundImage: `url(/footer/subsidiaries/${itm}.svg)`,
