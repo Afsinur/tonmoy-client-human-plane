@@ -3,10 +3,11 @@ import { srcChangeFn } from "./Corporate";
 import { motion } from "framer-motion";
 
 function OurValues() {
-  const { setImageSrc, setTitle } = srcChangeFn();
+  const { setImageSrc, setTitle, setBread } = srcChangeFn();
   useEffect(() => {
     setImageSrc("/values-bg.jpg");
     setTitle("Değerlerimiz");
+    setBread("Kurumsal > Değerlerimiz");
   }, []);
 
   return (

@@ -25,7 +25,7 @@ function News() {
       voluptatum, similique earum eius aperiam odio, nostrum perferendis
       vero corporis accusantium.
       `,
-      src: "/news-1.jpg",
+      src: "/news-top-right.jpg",
       date: "24 February 2024",
       type: "image",
     },
@@ -38,7 +38,7 @@ function News() {
       voluptatum, similique earum eius aperiam odio, nostrum perferendis
       vero corporis accusantium.
       `,
-      src: "/news-1.jpg",
+      src: "/news-bottom-left.jpg",
       date: "24 February 2024",
       type: "image",
     },
@@ -51,7 +51,7 @@ function News() {
       voluptatum, similique earum eius aperiam odio, nostrum perferendis
       vero corporis accusantium.
       `,
-      src: "/news-1.jpg",
+      src: "/news-bottom-right.jpg",
       date: "24 February 2024",
       type: "image",
     },

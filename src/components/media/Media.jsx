@@ -7,7 +7,7 @@ function Media() {
   return (
     <div>
       <div className="bg-[#142143]">
-        <NavBar />
+        <NavBar bread={"Medya > Basın Yayın"} />
         <div className="container mx-auto">
           <News />
         </div>

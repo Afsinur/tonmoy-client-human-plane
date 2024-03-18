@@ -12,7 +12,7 @@ function NavbarWithHero({ page }) {
     <div
       className={`h-[98vh] relative overflow-hidden bg-[url('/slider-2-1.png')] bg-cover bg-center`}
     >
-      <NavBar />
+      <NavBar bread={""} />
 
       {!(page == "more-info") && (
         <div className="container mx-auto flex items-center h-4/6">

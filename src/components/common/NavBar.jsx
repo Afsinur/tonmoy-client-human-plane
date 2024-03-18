@@ -1,7 +1,7 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ bread }) {
   const uls = [
     {
       title: "Kurumsal",
@@ -19,6 +19,7 @@ function NavBar() {
           href: "/corporate/our-working-principles",
         },
       ],
+      hoverImg: "/corporate-hover-left.jpg",
     },
     {
       title: "Faaliyet Alanları",
@@ -44,6 +45,7 @@ function NavBar() {
         { title: "İşe alım Kriterler", href: "#" },
         { title: "Hemen Başvur", href: "#" },
       ],
+      hoverImg: "/career-hover-left.jpg",
     },
     {
       title: "İletişim",
@@ -53,6 +55,7 @@ function NavBar() {
       title: "Medya",
       href: "#",
       subTitles: [{ title: "Basın Yayın", href: "/media/home" }],
+      hoverImg: "/news-hover-left.jpg",
     },
     {
       title: "survey",
@@ -60,7 +63,6 @@ function NavBar() {
       reactLink: true,
     },
   ];
-  const navigate = useNavigate();
 
   function handleClick(e) {
     setTimeout(() => {
@@ -101,7 +103,10 @@ function NavBar() {
                     className={` transition-all duration-300 block w-full bg-white text-slate-600 fixed left-0 h-0 group-hover:h-[52vh] overflow-hidden`}
                   >
                     <div className="grid grid-cols-3 h-full">
-                      <div className="bg-[url(/get-to-know-us-right-img.jpg)] bg-cover bg-center h-full"></div>
+                      <div
+                        style={{ backgroundImage: `url(${itm.hoverImg})` }}
+                        className={`bg-cover bg-center h-full`}
+                      ></div>
 
                       <div className="col-span-2">
                         <div>
@@ -111,7 +116,7 @@ function NavBar() {
                                 <Link
                                   onClick={(e) => handleClick(e)}
                                   to={subItm.href}
-                                  className="px-10 py-4 block hover:bg-gray-100 transition-colors"
+                                  className="nav-bar-links px-10 py-4 block relative"
                                 >
                                   {subItm.title}
                                 </Link>
@@ -127,6 +132,14 @@ function NavBar() {
             ))}
           </ul>
         </div>
+
+        {bread != "" && (
+          <div className="bg-[#FFD700] py-2">
+            <div className="container mx-auto">
+              <p className="font-semibold text-slate-800">{bread}</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

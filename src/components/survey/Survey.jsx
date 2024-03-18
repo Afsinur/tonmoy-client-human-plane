@@ -9,7 +9,7 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 function Survey() {
   return (
     <div className="bg-[#142143]">
-      <NavBar />
+      <NavBar bread={""} />
 
       <div className="container mx-auto py-20 ">
         <h1 className="capitalize font-semibold text-6xl text-slate-300">

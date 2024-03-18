@@ -6,6 +6,7 @@ import Footer from "../home/Footer";
 function Corporate() {
   const [imageSrc, setImageSrc] = useState(null);
   const [title, setTitle] = useState(null);
+  const [bread, setBread] = useState(null);
   const dontShowArray = ["Hakkımızda", "Tuğçe"];
 
   return (
@@ -17,7 +18,7 @@ function Corporate() {
             backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${imageSrc})`,
           }}
         >
-          <NavBar />
+          <NavBar bread={bread} />
 
           <div className="container mx-auto flex items-center">
             <h2 className="text-white text-4xl">{title}</h2>
@@ -25,13 +26,13 @@ function Corporate() {
         </div>
       ) : (
         <div>
-          <NavBar />
+          <NavBar bread={bread} />
         </div>
       )}
 
       <div className="bg-[#142143]">
         <div className="container mx-auto min-h-[40vh] py-20 flex flex-col gap-6">
-          <Outlet context={{ setImageSrc, setTitle }} />
+          <Outlet context={{ setImageSrc, setTitle, setBread }} />
         </div>
       </div>
 

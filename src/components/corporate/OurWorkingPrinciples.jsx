@@ -3,10 +3,11 @@ import { srcChangeFn } from "./Corporate";
 import { motion } from "framer-motion";
 
 function OurWorkingPrinciples() {
-  const { setImageSrc, setTitle } = srcChangeFn();
+  const { setImageSrc, setTitle, setBread } = srcChangeFn();
   useEffect(() => {
     setImageSrc("/working-principles-bg.jpg");
     setTitle("Çalışma Prensiplerimiz");
+    setBread("Kurumsal > Çalışma Prensiplerimiz");
   }, []);
 
   return (

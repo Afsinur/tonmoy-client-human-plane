@@ -3,10 +3,11 @@ import { srcChangeFn } from "./Corporate";
 import { motion } from "framer-motion";
 
 function OurFounder() {
-  const { setImageSrc, setTitle } = srcChangeFn();
+  const { setImageSrc, setTitle, setBread } = srcChangeFn();
   useEffect(() => {
     setImageSrc("/our-founder-bg.jpg");
     setTitle("Tuğçe");
+    setBread("Kurumsal > Kurucumuz");
   }, []);
 
   return (
@@ -64,20 +65,21 @@ function OurFounder() {
             </motion.div>
           </div>
 
-          <div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.7 }} // Initial state of the element
-              whileInView={{ opacity: 1, scale: 1 }} // Animation state
-              transition={{ type: "spring", duration: 0.5, delay: 0.2 }} // Transition duration
-              viewport={{ once: true }}
-            >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.7 }} // Initial state of the element
+            whileInView={{ opacity: 1, scale: 1 }} // Animation state
+            transition={{ type: "spring", duration: 0.5, delay: 0.2 }} // Transition duration
+            viewport={{ once: true }}
+          >
+            <div className="relative grid place-content-center w-full h-full justify-items-center">
               <img
                 src="/our-founder.jpg"
                 alt="image"
-                className="relative w-full rounded-xl"
+                className="relative w-3/5 rounded-xl relative z-[5]"
               />
-            </motion.div>
-          </div>
+              <div className="w-3/5 h-3/5 bg-[#FFD700] blur absolute z-[4] translate-y-1/2 translate-x-[24px] rounded-3xl"></div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </>

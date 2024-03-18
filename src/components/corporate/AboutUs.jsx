@@ -3,14 +3,15 @@ import { srcChangeFn } from "./Corporate";
 import { motion } from "framer-motion";
 
 function AboutUs() {
-  const { setImageSrc, setTitle } = srcChangeFn();
+  const { setImageSrc, setTitle, setBread } = srcChangeFn();
   useEffect(() => {
     setImageSrc("/about-us-bg.jpg");
     setTitle("Hakkımızda");
+    setBread("Kurumsal > Hakkımızda");
   }, []);
   return (
     <>
-      <div className="grid gap-4 grid-cols-2">
+      <div className="grid gap-4 grid-cols-2 justify-items-center">
         <div className="flex flex-col gap-6">
           <motion.div
             initial={{ opacity: 0, y: 100 }} // Initial state of the element
@@ -55,20 +56,20 @@ function AboutUs() {
           </motion.div>
         </div>
 
-        <div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.7 }} // Initial state of the element
-            whileInView={{ opacity: 1, scale: 1 }} // Animation state
-            transition={{ type: "spring", duration: 0.5, delay: 0.2 }} // Transition duration
-            viewport={{ once: true }}
-          >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.7 }} // Initial state of the element
+          whileInView={{ opacity: 1, scale: 1 }} // Animation state
+          transition={{ type: "spring", duration: 0.5, delay: 0.2 }} // Transition duration
+          viewport={{ once: true }}
+        >
+          <div className="grid place-content-center w-full h-full justify-items-center">
             <img
               src="/about-us-right.jpg"
               alt="image"
-              className="w-full rounded-xl"
+              className="w-3/4 rounded-xl"
             />
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </>
   );
