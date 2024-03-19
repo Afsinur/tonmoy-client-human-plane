@@ -190,7 +190,7 @@ function SearchBox({ searchBox, searchBoxCard, isOpen, setIsOpen }) {
           }
         }}
         ref={searchBoxCard}
-        className="w-full h-[76vh] bg-[#FFD700] rounded-br-3xl rounded-bl-3xl transition-transform -translate-y-full"
+        className="md:px-0 px-2 w-full h-[76vh] bg-[#FFD700] rounded-br-3xl rounded-bl-3xl transition-transform -translate-y-full"
       >
         <p className="p-4 flex justify-end">
           <IoMdClose
@@ -209,7 +209,7 @@ function SearchBox({ searchBox, searchBoxCard, isOpen, setIsOpen }) {
             </p>
 
             <input
-              className="px-10 py-6 text-xl bg-transparent border-b border-slate-400 border-b-2 focus:border-slate-600 transition-colors outline-none"
+              className="md:px-10 px-2 md:py-6 py-2 text-xl bg-transparent border-b border-slate-400 border-b-2 focus:border-slate-600 transition-colors outline-none"
               type="text"
               placeholder="Aramak istediğiniz Kelimeye Girin"
             />

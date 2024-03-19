@@ -18,7 +18,9 @@ function OurWorkingPrinciples() {
         transition={{ type: "spring", duration: 0.5 }} // Transition duration
         viewport={{ once: true }}
       >
-        <h2 className="text-slate-300 text-4xl">Çalışma Prensiplerimiz</h2>
+        <h2 className="text-slate-300 text-4xl lg:px-0 px-2">
+          Çalışma Prensiplerimiz
+        </h2>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 100 }} // Initial state of the element
@@ -26,7 +28,7 @@ function OurWorkingPrinciples() {
         transition={{ type: "spring", duration: 0.5 }} // Transition duration
         viewport={{ once: true }}
       >
-        <p className="text-slate-400 text-xl">
+        <p className="text-slate-400 text-xl lg:px-0 px-2">
           Hedeflerimiz doğrultusunda Tuipaş olarak çalışmalarımızdan doğan
           sorumluluğu, tüm çabamızla üstlenmeye ve ilerlemeye gayret
           gösteriyoruz.
@@ -38,7 +40,7 @@ function OurWorkingPrinciples() {
         transition={{ type: "spring", duration: 0.5 }} // Transition duration
         viewport={{ once: true }}
       >
-        <h2 className="text-slate-300 text-4xl">Disiplin</h2>
+        <h2 className="text-slate-300 text-4xl lg:px-0 px-2">Disiplin</h2>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 100 }} // Initial state of the element
@@ -46,7 +48,7 @@ function OurWorkingPrinciples() {
         transition={{ type: "spring", duration: 0.5 }} // Transition duration
         viewport={{ once: true }}
       >
-        <p className="text-slate-400 text-xl">
+        <p className="text-slate-400 text-xl lg:px-0 px-2">
           Çaba ve azim ne kadar çok olursa olsun, disiplinin olmadığı bir yerde,
           bir adım ilerlemek oldukça zordur. Ülkemizi daha iyi yarınlara
           taşıyabilmek için çalışma alanlarımızı genişletiyor ve süreçleri
@@ -62,7 +64,9 @@ function OurWorkingPrinciples() {
         transition={{ type: "spring", duration: 0.5 }} // Transition duration
         viewport={{ once: true }}
       >
-        <h2 className="text-slate-300 text-4xl">Kişisel Gelişim ve Özgüven</h2>
+        <h2 className="text-slate-300 text-4xl lg:px-0 px-2">
+          Kişisel Gelişim ve Özgüven
+        </h2>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 100 }} // Initial state of the element
@@ -70,7 +74,7 @@ function OurWorkingPrinciples() {
         transition={{ type: "spring", duration: 0.5 }} // Transition duration
         viewport={{ once: true }}
       >
-        <p className="text-slate-400 text-xl">
+        <p className="text-slate-400 text-xl lg:px-0 px-2">
           Kişisel yeteneklerimizin en üst sınırına kadar kendimizi gelirştirmeyi
           hakkımız ve görevimiz olarak biliriz. Bu anlamda kendimize güvenmesek
           şayet içimizdeki hazineyi sergileyemeyiz ve olduğumuz yerde kalırız.
@@ -86,7 +90,9 @@ function OurWorkingPrinciples() {
         transition={{ type: "spring", duration: 0.5 }} // Transition duration
         viewport={{ once: true }}
       >
-        <h2 className="text-slate-300 text-4xl">Sorumluluk Sahibi</h2>
+        <h2 className="text-slate-300 text-4xl lg:px-0 px-2">
+          Sorumluluk Sahibi
+        </h2>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 100 }} // Initial state of the element
@@ -94,7 +100,7 @@ function OurWorkingPrinciples() {
         transition={{ type: "spring", duration: 0.5 }} // Transition duration
         viewport={{ once: true }}
       >
-        <p className="text-slate-400 text-xl">
+        <p className="text-slate-400 text-xl lg:px-0 px-2">
           Tarihimize sahip çıkmak ve geleceğimizin temelini kurmak, her birimize
           düşen bir görev ve aynı zamanda haktır. Bu görevi üstlenmek ve
           hakkımızdan istifade etmek, bugünün topraklarını inşa eden aziz

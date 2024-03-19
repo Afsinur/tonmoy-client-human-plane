@@ -58,7 +58,7 @@ function News() {
   ];
   return (
     <div className="bg-[#142143]">
-      <div className="container mx-auto py-40 text-white">
+      <div className="container mx-auto lg:py-40 py-16 text-white">
         <div className="grid gap-8">
           <div style={{ overflow: "hidden" }}>
             <motion.div
@@ -71,7 +71,7 @@ function News() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-2 gap-12 px-20">
+          <div className="grid lg:grid-cols-2 lg:px-20 grid-cols-1 px-2 gap-12">
             {news &&
               news.map((itm, i) => (
                 <div key={i}>

@@ -13,8 +13,8 @@ function Vision() {
   return (
     <>
       <div>
-        <div className="grid gap-4 grid-cols-2">
-          <div className="grid gap-4">
+        <div className="grid lg:gap-4 lg:grid-cols-2 lg:p-0 p-2 grid-cols-1 gap-10 justify-items-center">
+          <div className="lg:order-1 order-2 flex flex-col gap-6">
             <motion.div
               initial={{ opacity: 0, y: 100 }} // Initial state of the element
               whileInView={{ opacity: 1, y: 0 }} // Animation state
@@ -55,20 +55,22 @@ function Vision() {
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.7 }} // Initial state of the element
-            whileInView={{ opacity: 1, scale: 1 }} // Animation state
-            transition={{ type: "spring", duration: 0.5, delay: 0.2 }} // Transition duration
-            viewport={{ once: true }}
-          >
-            <div className="grid place-content-center w-full h-full justify-items-center">
-              <img
-                src="/vision-and-goal-right.jpg"
-                alt="image"
-                className="relative w-3/4 rounded-xl"
-              />
-            </div>
-          </motion.div>
+          <div className="lg:order-2 order-1 h-full grid place-content-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.7 }} // Initial state of the element
+              whileInView={{ opacity: 1, scale: 1 }} // Animation state
+              transition={{ type: "spring", duration: 0.5, delay: 0.2 }} // Transition duration
+              viewport={{ once: true }}
+            >
+              <div className="grid place-content-center w-full h-full justify-items-center">
+                <img
+                  src="/vision-and-goal-right.jpg"
+                  alt="image"
+                  className="relative w-3/4 rounded-xl"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </>

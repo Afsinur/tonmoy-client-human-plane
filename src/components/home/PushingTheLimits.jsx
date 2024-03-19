@@ -22,8 +22,6 @@ function PushingTheLimits() {
         const offsetX = event.clientX - startX;
         const newLeft = startLeft + offsetX;
 
-        console.log(offsetX);
-
         const minLeft = 0;
         const maxLeft =
           dragBarParent.current.offsetWidth - dragBar.current.offsetWidth;
@@ -88,7 +86,7 @@ function PushingTheLimits() {
           />
         </div>
 
-        <div className="select-none grid gap-8 absolute top-1/2 left-0 -translate-y-full text-white z-20">
+        <div className="select-none md:px-0 px-2 grid gap-8 absolute top-1/2 left-0 -translate-y-full text-white z-20">
           <motion.div
             initial={{ opacity: 0, x: -100 }} // Initial state of the element
             whileInView={{ opacity: 1, x: 0 }} // Animation state

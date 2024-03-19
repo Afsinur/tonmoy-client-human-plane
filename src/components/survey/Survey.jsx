@@ -11,7 +11,7 @@ function Survey() {
     <div className="bg-[#142143]">
       <NavBar bread={""} />
 
-      <div className="container mx-auto py-20 grid gap-4">
+      <div className="container mx-auto py-20 grid gap-4 lg:px-0 px-2">
         <h1 className="capitalize font-semibold text-6xl text-slate-300">
           Anket- Sonuçları
         </h1>
@@ -26,7 +26,7 @@ function Survey() {
           </p>
         </div>
 
-        <div className="p-20">
+        <div className="lg:p-20 p-2">
           <AutoplaySlider
             play={true}
             cancelOnInteraction={false} // should stop playing on user interaction
