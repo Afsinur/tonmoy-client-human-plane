@@ -78,7 +78,7 @@ function OurFounder() {
                   alt="image"
                   className="relative w-3/5 rounded-xl relative z-[5]"
                 />
-                <div className="w-3/5 h-3/5 bg-[#FFD700] blur absolute z-[4] translate-y-1/2 translate-x-[24px] rounded-3xl"></div>
+                <div className="w-3/5 h-3/5 bg-[--theme-yellow] blur absolute z-[4] translate-y-1/2 translate-x-[24px] rounded-3xl"></div>
               </div>
             </motion.div>
           </div>

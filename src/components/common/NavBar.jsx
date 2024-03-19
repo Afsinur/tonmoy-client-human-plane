@@ -1,11 +1,15 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdSearch, IoMdClose } from "react-icons/io";
+import { IoMenu } from "react-icons/io5";
 
 function NavBar({ bread }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMonNavOpen, setIsMonNavOpen] = useState(false);
   const searchBox = useRef();
   const searchBoxCard = useRef();
+  const mobileNavRef = useRef();
+  const mobileNavContentRef = useRef();
 
   const uls = [
     {
@@ -97,76 +101,154 @@ function NavBar({ bread }) {
             <img src="/logo-white.png" alt="image" className="w-52" />
           </Link>
 
-          <div className="flex gap-2">
-            <ul className="flex items-center gap-8 text-white text-base font-semibold">
-              {uls.map((itm, i) => (
-                <li className="relative group capitalize" key={i}>
-                  {itm.reactLink ? (
-                    <Link to={itm.href}>{itm.title}</Link>
-                  ) : (
-                    <Link to={itm.href} className="py-4">
-                      {itm.title}
-                    </Link>
-                  )}
+          <div className="flex items-center">
+            <div className="2xl:hidden pr-2">
+              <IoMenu
+                className="text-white text-4xl cursor-pointer"
+                onClick={() => {
+                  setIsMonNavOpen(true);
+                  mobileNavRef.current.classList.remove(
+                    "opacity-0",
+                    "pointer-events-none"
+                  );
+                  mobileNavContentRef.current.classList.remove(
+                    "translate-x-full"
+                  );
+                }}
+              />
 
-                  {itm.subTitles && (
-                    <div
-                      style={{ top: `57px` }}
-                      data-sub-nav-container=""
-                      className={` transition-all duration-300 block w-full bg-white text-slate-600 fixed left-0 h-0 group-hover:h-[52vh] overflow-hidden`}
-                    >
-                      <div className="grid grid-cols-3 h-full">
-                        <div
-                          style={{ backgroundImage: `url(${itm.hoverImg})` }}
-                          className={`bg-cover bg-center h-full`}
-                        ></div>
+              <div
+                ref={mobileNavRef}
+                data-responsive-sub-nav-container
+                className="opacity-0 pointer-events-none fixed top-0 left-0 flex justify-end w-full h-[100vh] bg-[#00000089]"
+                onClick={() => {
+                  setIsMonNavOpen(false);
+                  mobileNavContentRef.current.classList.add("translate-x-full");
+                }}
+              >
+                <div
+                  ref={mobileNavContentRef}
+                  className="translate-x-full transition-transform w-[80%] bg-[--theme-yellow] h-full overflow-x-hidden p-8"
+                  onTransitionEnd={() => {
+                    if (!isMonNavOpen) {
+                      mobileNavRef.current.classList.add(
+                        "opacity-0",
+                        "pointer-events-none"
+                      );
+                    }
+                  }}
+                >
+                  <ul>
+                    {uls.map((itm, i) => (
+                      <li
+                        className="relative capitalize font-semibold text-slate-600"
+                        key={i}
+                      >
+                        {itm.reactLink ? (
+                          <Link to={itm.href} className="block p-4">
+                            {itm.title}
+                          </Link>
+                        ) : (
+                          <Link to={itm.href} className="block p-4">
+                            {itm.title}
+                          </Link>
+                        )}
 
-                        <div className="col-span-2">
-                          <div>
-                            <ul className="text-sm">
-                              {itm.subTitles.map((subItm, subI) => (
-                                <li key={subI}>
-                                  <Link
-                                    onClick={(e) => handleClick(e)}
-                                    to={subItm.href}
-                                    className="nav-bar-links px-10 py-4 block relative"
-                                  >
-                                    {subItm.title}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
+                        {itm.subTitles && (
+                          <ul className="text-sm">
+                            {itm.subTitles.map((subItm, subI) => (
+                              <li key={subI}>
+                                <Link
+                                  onClick={(e) => handleClick(e)}
+                                  to={subItm.href}
+                                  className="nav-bar-links px-10 py-4 block relative"
+                                >
+                                  {subItm.title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="gap-2 flex">
+              <ul className="2xl:flex hidden items-center gap-8 text-white text-base font-semibold">
+                {uls.map((itm, i) => (
+                  <li className="relative group capitalize" key={i}>
+                    {itm.reactLink ? (
+                      <Link to={itm.href}>{itm.title}</Link>
+                    ) : (
+                      <Link to={itm.href} className="py-4">
+                        {itm.title}
+                      </Link>
+                    )}
+
+                    {itm.subTitles && (
+                      <div
+                        style={{ top: `57px` }}
+                        data-sub-nav-container=""
+                        className={` transition-all duration-300 block w-full bg-white text-slate-600 fixed left-0 h-0 group-hover:h-[52vh] overflow-hidden`}
+                      >
+                        <div className="grid grid-cols-3 h-full">
+                          <div
+                            style={{ backgroundImage: `url(${itm.hoverImg})` }}
+                            className={`bg-cover bg-center h-full`}
+                          ></div>
+
+                          <div className="col-span-2">
+                            <div>
+                              <ul className="text-sm">
+                                {itm.subTitles.map((subItm, subI) => (
+                                  <li key={subI}>
+                                    <Link
+                                      onClick={(e) => handleClick(e)}
+                                      to={subItm.href}
+                                      className="nav-bar-links px-10 py-4 block relative"
+                                    >
+                                      {subItm.title}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  )}
-                </li>
-              ))}
-            </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
 
-            <div className="border-l border-white pl-2">
-              <button
-                type="button"
-                aria-label="Search"
-                className="flex items-center justify-center"
-                onClick={() => handleSearchOpen()}
-              >
-                <IoMdSearch className="text-white text-xl hover:text-[#FFD700] mt-1" />
-              </button>
+              <div className="border-l border-white pl-2">
+                <button
+                  type="button"
+                  aria-label="Search"
+                  className="flex items-center justify-center"
+                  onClick={() => handleSearchOpen()}
+                >
+                  <IoMdSearch
+                    className={`text-white text-xl hover:text-[--theme-yellow] mt-1`}
+                  />
+                </button>
 
-              <SearchBox
-                searchBox={searchBox}
-                searchBoxCard={searchBoxCard}
-                isOpen={isOpen}
-                setIsOpen={setIsOpen}
-              />
+                <SearchBox
+                  searchBox={searchBox}
+                  searchBoxCard={searchBoxCard}
+                  isOpen={isOpen}
+                  setIsOpen={setIsOpen}
+                />
+              </div>
             </div>
           </div>
         </div>
 
         {bread != "" && (
-          <div className="bg-[#FFD700] py-2">
+          <div className={`bg-[--theme-yellow] py-2`}>
             <div className="container mx-auto">
               <p className="font-semibold text-slate-800">{bread}</p>
             </div>
@@ -190,7 +272,7 @@ function SearchBox({ searchBox, searchBoxCard, isOpen, setIsOpen }) {
           }
         }}
         ref={searchBoxCard}
-        className="md:px-0 px-2 w-full h-[76vh] bg-[#FFD700] rounded-br-3xl rounded-bl-3xl transition-transform -translate-y-full"
+        className={`md:px-0 px-2 w-full h-[76vh] bg-[--theme-yellow] rounded-br-3xl rounded-bl-3xl transition-transform -translate-y-full`}
       >
         <p className="p-4 flex justify-end">
           <IoMdClose

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --theme-yellow: #f6efa6; /*ffd700*/
+}
+
 body {
   overflow-x: hidden;
 }
@@ -98,7 +102,7 @@ body {
 }
 
 .nav-bar-links:hover::after {
-  background-color: #ffd700;
+  background-color: var(--theme-yellow);
 }
 
 @keyframes pulse-animation {
