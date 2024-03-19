@@ -11,10 +11,20 @@ function Survey() {
     <div className="bg-[#142143]">
       <NavBar bread={""} />
 
-      <div className="container mx-auto py-20 ">
+      <div className="container mx-auto py-20 grid gap-4">
         <h1 className="capitalize font-semibold text-6xl text-slate-300">
           Anket- Sonuçları
         </h1>
+
+        <div>
+          <p className="text-slate-400 text-xl">
+            Anket çalışmalarımız çerçevesinde insanların Uçan İnsan Projesi ile
+            ilgili bakış açılarını ölçmeyi amaçladık. Buradan elde ettiğimiz
+            sonuçlar ve önerileriniz incelenmiş olup, Türkiye’nin ilk uçan insan
+            projesinin çalışma sürecine yön vermiştir. Bu anlamda tüm
+            katılımcılarımıza teşekkürlerimizi sunarız.
+          </p>
+        </div>
 
         <div className="p-20">
           <AutoplaySlider

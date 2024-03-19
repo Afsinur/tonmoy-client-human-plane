@@ -185,7 +185,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.instagram.com/tuipas_?igsh=bmozdGZnZjJlazdr">
                   <FaInstagram />
                 </a>
               </li>
