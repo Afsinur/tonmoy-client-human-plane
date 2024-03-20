@@ -9,8 +9,8 @@ function Details() {
             Kullanim <br /> alanlari
           </h2>
 
-          <div className="flex pl-48 relative">
-            <div className="grid gap-2 text-white general-info grid gap-8">
+          <div className="flex lg:pl-48 relative">
+            <div className="grid gap-2 text-white general-info gap-8">
               <h2 className="text-xl font-semibold">
                 Kullanım Alanları ve Teknik Özellikleri
               </h2>

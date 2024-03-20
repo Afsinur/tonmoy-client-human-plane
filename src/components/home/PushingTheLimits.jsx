@@ -72,21 +72,19 @@ function PushingTheLimits() {
       </div>
 
       <div className="container mx-auto py-20 relative overflow-hidden">
-        <div className="relative h-[60vh] select-none">
-          <img
-            src="/sceleton.png"
-            alt="image"
-            className="w-[954px] sceleton absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-          />
-          <img
-            ref={meat}
-            src="/meat.png"
-            alt="image"
-            className="w-[700px] meat absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-          />
+        <div className="relative h-[100vh] select-none w-full">
+          <div className="w-[700px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+            <img src="/sceleton.png" alt="image" className="w-full sceleton" />
+            <img
+              ref={meat}
+              src="/meat.png"
+              alt="image"
+              className="w-[73%] meat absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
         </div>
 
-        <div className="select-none md:px-0 px-2 grid gap-8 absolute top-1/2 left-0 -translate-y-full text-white z-20">
+        <div className="select-none md:px-0 px-2 grid gap-8 absolute top-1/3 left-0 -translate-y-full text-white z-20">
           <motion.div
             initial={{ opacity: 0, x: -100 }} // Initial state of the element
             whileInView={{ opacity: 1, x: 0 }} // Animation state

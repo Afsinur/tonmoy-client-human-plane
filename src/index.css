@@ -23,6 +23,7 @@ body {
   transform: rotate(-90deg) translatex(-50%);
   font-size: 2rem;
   font-weight: bold;
+  display: none;
 }
 
 .pulse-animate::before {
@@ -41,6 +42,10 @@ body {
   pointer-events: none;
 }
 
+.pulse-animate {
+  z-index: 8;
+}
+
 .pulse-animate::after {
   display: none;
   content: attr(data-title);
@@ -48,14 +53,24 @@ body {
   position: absolute;
   top: 0%;
   left: 50%;
-  transform: translate(-50%, -116%);
-  padding: 10px 30px;
+  transform: translate(-50%, -150px);
+  padding: 4px 10px;
   width: fit-content;
   text-wrap: nowrap;
   background: white;
   border-radius: 6px;
   font-size: 0.86rem;
   border: 6px solid white;
+}
+
+@media (min-width: 1024px) {
+  .pulse-animate::after {
+    padding: 4px 10px;
+    transform: translate(-50%, -116%);
+  }
+  .general-info::before {
+    display: block;
+  }
 }
 
 .pulse-animate:hover {
