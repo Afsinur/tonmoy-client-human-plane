@@ -25,9 +25,9 @@ function News() {
       voluptatum, similique earum eius aperiam odio, nostrum perferendis
       vero corporis accusantium.
       `,
-      src: "/news-top-right.jpg",
+      src: "https://www.youtube.com/embed/3GHqe2oboLs",
       date: "24 February 2024",
-      type: "image",
+      type: "iframe",
     },
     {
       title:
@@ -104,11 +104,13 @@ function GridCards({ obj }) {
             autoPlay
             muted
             loop
-            className="min-w-full min-h-full object-cover rounded-xl"
+            className="min-w-full aspect-video object-cover rounded-xl"
           >
             <source src={obj.src} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+        ) : obj.type == "iframe" ? (
+          <iframe class="w-full aspect-video rounded-xl" src={obj.src}></iframe>
         ) : (
           <img src={obj.src} alt="image" className="rounded-xl" />
         )}
