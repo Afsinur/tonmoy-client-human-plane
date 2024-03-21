@@ -7,7 +7,7 @@ function ContactPage() {
   return (
     <div>
       <div className="bg-[url(/contact-us-bg.jpg)] w-full h-[60vh] bg-center bg-cover grid">
-        <NavBar />
+        <NavBar bread={""} />
 
         <div className="container mx-auto flex flex-col justify-end">
           <h2 className="uppercase text-white pb-20 text-4xl font-normal">

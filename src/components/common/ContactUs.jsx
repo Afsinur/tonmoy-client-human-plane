@@ -30,7 +30,7 @@ function ContactUs() {
   return (
     <div className="bg-white">
       <div className="container mx-auto py-20">
-        <div className="grid grid-cols-2 gap-8 font-semibold">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 font-semibold">
           <div className="flex flex-col gap-8">
             <h2 className="capitalize text-4xl text-slate-500">
               this is our location
@@ -143,8 +143,8 @@ function ContactUs() {
                 </div>
                 <div className="w-full grid place-content-center text-lg">
                   <ReCAPTCHA
-                    //6LeqD5YpAAAAAACGKKFNMb4NPUKrFkjqJ8QJx7-L
-                    sitekey="6Lc2eZYpAAAAAARaaTLB0e2uxUmcSlBQMx13X3Dg"
+                    //sitekey="6Lc2eZYpAAAAAARaaTLB0e2uxUmcSlBQMx13X3Dg"
+                    sitekey="6LeqD5YpAAAAAACGKKFNMb4NPUKrFkjqJ8QJx7-L"
                     onChange={onChange}
                   />
                 </div>
