@@ -102,7 +102,7 @@ function NavBar({ bread }) {
           </Link>
 
           <div className="flex items-center">
-            <div className="2xl:hidden pr-2">
+            <div className="lg:hidden pr-2">
               <IoMenu
                 className="text-white text-4xl cursor-pointer"
                 onClick={() => {
@@ -177,7 +177,7 @@ function NavBar({ bread }) {
             </div>
 
             <div className="gap-2 flex">
-              <ul className="2xl:flex hidden items-center gap-8 text-white text-base font-semibold">
+              <ul className="lg:flex hidden items-center gap-6 text-white text-base font-semibold">
                 {uls.map((itm, i) => (
                   <li className="relative group capitalize" key={i}>
                     {itm.reactLink ? (
@@ -224,7 +224,7 @@ function NavBar({ bread }) {
                 ))}
               </ul>
 
-              <div className="border-l border-white pl-2">
+              <div className="border-l border-white pl-2 flex items-center">
                 <button
                   type="button"
                   aria-label="Search"
