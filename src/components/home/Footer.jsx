@@ -8,135 +8,106 @@ import {
 import { Link } from "react-router-dom";
 
 function Footer() {
+  const uls = [
+    {
+      title: "Kurumsal",
+      href: "#",
+      subTitles: [
+        { title: "Hakkımızda", href: "/corporate" },
+        { title: "Kurucumuz kimdir?", href: "/corporate/our-founder" },
+        {
+          title: "Vizyon & Hedeflerimiz",
+          href: "/corporate/vision",
+        },
+        { title: "Değerlerimiz", href: "/corporate/our-values" },
+        {
+          title: "Çalışma Prensiplerimiz",
+          href: "/corporate/our-working-principles",
+        },
+      ],
+      hoverImg: "/corporate-hover-left.jpg",
+    },
+    {
+      title: "Faaliyet Alanları",
+      href: "#",
+    },
+    {
+      title: "Ar-Ge ve İnovasyon",
+      href: "#",
+    },
+    {
+      title: "Sürdürülebilirlik",
+      href: "#",
+    },
+    {
+      title: "Yatırımcı İlişkiler",
+      href: "#",
+    },
+    {
+      title: "Kariyer",
+      href: "#",
+      subTitles: [
+        { title: "TUİPAŞTA Seni Neler Bekliyor?", href: "#" },
+        { title: "İşe alım Kriterler", href: "#" },
+        { title: "Hemen Başvur", href: "#" },
+      ],
+      hoverImg: "/career-hover-left.jpg",
+    },
+    {
+      title: "İletişim",
+      href: "/contact-us",
+    },
+    {
+      title: "Medya",
+      href: "#",
+      subTitles: [{ title: "Basın Yayın", href: "/media/home" }],
+      hoverImg: "/news-hover-left.jpg",
+    },
+    {
+      title: "survey",
+      href: "/survey",
+      reactLink: true,
+    },
+  ];
+
   return (
     <div className="bg-[#142143] text-white py-20 md:px-0 px-2">
       <div className="container mx-auto grid gap-8">
-        <div className="grid lg:gap-4 md:gap-10 gap-12 lg:grid-cols-5 md:grid-cols-3 grid-cols-1 lg:justify-items-start justify-items-center">
-          <div className="flex flex-col gap-6">
-            <h2 className="text-sm text-slate-100 font-semibold uppercase">
-              ŞİRKET
-            </h2>
+        <div
+          className={`grid lg:gap-4 md:gap-10 gap-12 lg:grid-cols-${
+            uls.filter((ul) => ul.subTitles).length
+          } md:grid-cols-3 grid-cols-1 lg:justify-items-start justify-items-center`}
+        >
+          {uls &&
+            uls
+              .filter((ul) => ul.subTitles)
+              .map((ul, i) => (
+                <div className={`flex flex-col gap-6`} key={i}>
+                  {ul.subTitles && (
+                    <>
+                      <Link
+                        to={ul.href}
+                        className="text-sm text-slate-100 font-semibold uppercase"
+                      >
+                        {ul.title}
+                      </Link>
 
-            <ul className="text-sm text-slate-400 font-light grid gap-2">
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Hakkında
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Özel Jet Yemek Servisi
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Hedefler
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Uçuş Ara
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Uçuşu Rezerve Et
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-6">
-            <h2 className="text-sm text-slate-100 font-semibold uppercase">
-              ÇÖZÜMLERİMİZ
-            </h2>
-
-            <ul className="text-sm text-slate-400 font-light grid gap-2">
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Hakkında
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Özel Jet Yemek Servisi
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Hedefler
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Uçuş Ara
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-6">
-            <h2 className="text-sm text-slate-100 font-semibold uppercase">
-              YENİLİK
-            </h2>
-
-            <ul className="text-sm text-slate-400 font-light grid gap-2">
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Hakkında
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Özel Jet Yemek Servisi
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Hedefler
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Uçuş Ara
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-6">
-            <h2 className="text-sm text-slate-100 font-semibold uppercase">
-              KARİYER
-            </h2>
-
-            <ul className="text-sm text-slate-400 font-light grid gap-2">
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Hakkında
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Özel Jet Yemek Servisi
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-slate-500">
-                  Hedefler
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-6">
-            <h2 className="text-sm text-slate-100 font-semibold uppercase">
-              HABERLER
-            </h2>
-
-            <Link to="/contact-us" className="uppercase text-base font-bold">
-              BİZİMLE İLETİŞİME GEÇİN
-            </Link>
-          </div>
+                      <ul className="text-sm text-slate-400 font-light grid gap-2">
+                        {ul.subTitles.map((subUl, subI) => (
+                          <li key={subI}>
+                            <Link
+                              to={subUl.href}
+                              className="hover:text-slate-500"
+                            >
+                              {subUl.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </div>
+              ))}
         </div>
 
         <div className="grid md:grid-cols-4 grid-cols-1 gap-10">
